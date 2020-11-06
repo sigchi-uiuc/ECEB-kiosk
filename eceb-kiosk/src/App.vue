@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main style="background: #e84a27;">
       <transition name="slide" mode="out-in">
         <router-view/>
       </transition>
+      <!--<v-scroll-x-transition mode="in" hide-on-leave="true">
+        <router-view></router-view>
+      </v-scroll-x-transition>-->
     </v-main>
   </v-app>
 </template>
@@ -23,7 +26,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
   html {
     overflow: hidden;
@@ -33,7 +36,7 @@ export default {
   body {
     overflow: hidden;
     height: 100%;
-    background: orange !important;
+    background: #e84a27 !important;
   }
 
   .slide-leave-active,
@@ -54,5 +57,11 @@ export default {
     height: 100%;
     padding: 0;
     margin: 0;
+    background: white;
   }
+
+  a {
+    text-decoration: none;
+  }
+
 </style>

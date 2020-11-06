@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="home-page page">
     <v-container fluid id="home-title">
       <v-container fluid id="title-text">
         The ECE Building has saved 500 polar bears now
@@ -8,9 +8,18 @@
         Learn more about Electricity Consumption, and how you can make a difference.
       </v-container>
     </v-container>
+    
     <v-container fluid id="home-button-row">
-          <v-btn to="/about" outlined outine-width="2px" class="home-button">LEARN MORE</v-btn>
-          <v-btn to="/template" outlined class="home-button">SIGN THE PLEDGE</v-btn>
+      <v-slide-y-transition mode="out-in" hide-on-leav="true">
+        <v-btn @click="learnMoreShow = !learnMoreShow" v-show="!learnMoreShow" outlined outine-width="2px" class="home-button">LEARN MORE</v-btn>
+      </v-slide-y-transition>
+      <v-slide-y-transition mode="out-in">
+        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">OPTION 1</v-btn>
+      </v-slide-y-transition>
+      <v-slide-y-transition mode="out-in">
+        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">OPTION 2</v-btn>
+      </v-slide-y-transition>
+      <v-btn to="/template" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
     </v-container>
   </div>
 </template>
@@ -18,15 +27,25 @@
 <script>
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  data: () => ({
+      "learnMoreShow": false
+    }),
+  methods: {
+    learnMoreClick() {
+      this.learnMoreShow = !this.learnMoreShow;
+    }
+  }
 }
 </script>
 
 <style scoped>
 
   .home-page {
-    background: #E84A27;
+    background: linear-gradient(225deg, rgba(232,74,39,1) 30%, rgba(19,41,75,1) 100%);
     height: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   body.noScroll {
@@ -103,6 +122,10 @@ export default {
     height: 110px !important;
 
     margin: 20px;
+  }
+
+  #pledge-button {
+    
   }
 
   .v-btn--outlined {
