@@ -18,12 +18,14 @@
           </v-col>
         
         <v-col id="university-consumption" class="decision-col">
-          <v-img to="/"
+          <router-link to="/">
+          <v-img
               src="../../assets/SolarPanels.jpg"
               class="white--text align-end card-image rounded-xl"
               gradient="to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.0), rgba(0,0,0,.8)">
             <v-card-title class="card-text">See The University’s Specific Energy Consumption</v-card-title>
             </v-img>
+          </router-link>
         </v-col>
       </v-row>
       <!--<v-btn to="/" x-large id="back-button">Back</v-btn>-->

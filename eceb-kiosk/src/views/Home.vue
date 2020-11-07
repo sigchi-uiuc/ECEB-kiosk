@@ -1,11 +1,25 @@
 <template>
   <div class="home-page page">
     <v-container fluid id="home-title">
-      <v-container fluid id="title-text">
-        The ECE Building has saved 500 polar bears now
-      </v-container>
+      <v-carousel cycle interval=10000 hide-delimiters :show-arrows=false>
+      <v-carousel-item>
+        <v-container fluid class="title-text">
+          The ECE Building Has Saved 500 Polar Bears Now
+        </v-container>
+      </v-carousel-item>
+      <v-carousel-item>
+        <v-container fluid class="title-text">
+          The ECE Building Has Saved None Polar Bears Now
+        </v-container>
+      </v-carousel-item>
+      <v-carousel-item>
+        <v-container fluid class="title-text">
+          The ECE Building Has Saved 1 Polar Bears Now
+        </v-container>
+      </v-carousel-item>
+      </v-carousel>
       <v-container fluid id="subtitle-text">
-        Learn more about Electricity Consumption, and how you can make a difference.
+        Learn More About Electricity Consumption, And How You Can Make A Difference
       </v-container>
     </v-container>
     
@@ -14,12 +28,20 @@
         <v-btn @click="learnMoreShow = !learnMoreShow" v-show="!learnMoreShow" outlined outine-width="2px" class="home-button">LEARN MORE</v-btn>
       </v-slide-y-transition>
       <v-slide-y-transition mode="out-in">
-        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">OPTION 1</v-btn>
+        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="false" outlined outine-width="2px" class="home-button">OPTION 1</v-btn>
       </v-slide-y-transition>
       <v-slide-y-transition mode="out-in">
-        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">OPTION 2</v-btn>
+        <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="false" outlined outine-width="2px" class="home-button">OPTION 2</v-btn>
       </v-slide-y-transition>
       <v-btn to="/template" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
+    </v-container>
+    <v-container fluid id="learn-more-row">>
+      <transition name="slide1">
+        <v-btn :to="{ name: 'Learn-More-Energy'}" style="transition-delay: 0.3s;" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">ENERGY AT UIUC</v-btn>
+      </transition>
+      <transition name="slide1">
+        <v-btn :to="{ name: 'Learn-More-Energy'}" style="transition-delay: 0.3s;" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">WHAT YOU CAN DO</v-btn>
+      </transition>
     </v-container>
   </div>
 </template>
@@ -63,7 +85,7 @@ export default {
     margin: 0;
   }
 
-  #title-text {
+  .title-text {
     position: absolute;
 
     outline-width: 2px !important;
@@ -110,6 +132,13 @@ export default {
     right: 53px;
   }
 
+  #learn-more-row {
+    position:absolute;
+    width: auto;
+    bottom: 20px;
+    right: 553px;
+  }
+
   .home-button {
     color: white !important;
 
@@ -130,6 +159,34 @@ export default {
 
   .v-btn--outlined {
     border: thick solid currentColor !important;
+  }
+
+  .expand-transition {
+  transition: all 2s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
 }
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+.slide1-enter-active, .slide1-leave-active {
+  transition-delay: 1s;
+  transition: .2s ease-out;
+}
+
+/*
+you set the css property before transition starts
+*/
+.slide1-enter, .slide1-leave-to {
+transform: translate(0, 200%);
+}
+
 
 </style>
