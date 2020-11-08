@@ -23,7 +23,8 @@
       </v-container>
     </v-container>
     
-    <v-container fluid id="home-button-row">
+    <v-container fluid id="home-button-row"> 
+      <!--
       <v-slide-y-transition mode="out-in" hide-on-leav="true">
         <v-btn @click="learnMoreShow = !learnMoreShow" v-show="!learnMoreShow" outlined outine-width="2px" class="home-button">LEARN MORE</v-btn>
       </v-slide-y-transition>
@@ -32,17 +33,18 @@
       </v-slide-y-transition>
       <v-slide-y-transition mode="out-in">
         <v-btn :to="{ name: 'Learn-More-Energy'}" v-show="false" outlined outine-width="2px" class="home-button">OPTION 2</v-btn>
-      </v-slide-y-transition>
-      <v-btn to="/template" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
+      </v-slide-y-transition>-->
+
+      <v-btn :to="{ name: 'Learn-More-Energy'}"  outlined outine-width="2px" class="home-button">ENERGY AT UIUC</v-btn>
+      <v-btn :to="{ name: 'Learn-More-Energy'}"  outlined outine-width="2px" class="home-button">WHAT YOU CAN DO</v-btn>
+      <v-btn to="/pledge-choices" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
     </v-container>
-    <v-container fluid id="learn-more-row">>
-      <transition name="slide1">
-        <v-btn :to="{ name: 'Learn-More-Energy'}" style="transition-delay: 0.3s;" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">ENERGY AT UIUC</v-btn>
-      </transition>
-      <transition name="slide1">
-        <v-btn :to="{ name: 'Learn-More-Energy'}" style="transition-delay: 0.3s;" v-show="learnMoreShow" outlined outine-width="2px" class="home-button">WHAT YOU CAN DO</v-btn>
-      </transition>
-    </v-container>
+    <!--
+    <transition name="slide1">
+      <v-container fluid id="learn-more-row" style="transition-delay: 0.3s;" v-show="learnMoreShow">
+          
+      </v-container>
+    </transition>-->
   </div>
 </template>
 

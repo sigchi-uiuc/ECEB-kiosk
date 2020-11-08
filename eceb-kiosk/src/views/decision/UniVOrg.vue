@@ -1,44 +1,21 @@
 <template>
-  <div class="learn-more-energy-page page">
+  <div class="uni-v-org-page page">
     <div class="decision-title">
       Learn More About Energy And Sustainability at UIUC
     </div>
     <v-container fluid id="decision-buttons">
       <v-row no-gutters class="decision-row">
         
-          <v-col md="8" class="decision-col">
-            <router-link to="/uni-v-org">
-                <v-img
-                  src="../../assets/uiuc-greenhouse.jpg"
-                  class="white--text align-end card-image rounded-xl"
-                  gradient="to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.1), rgba(0,0,0,.8)">
-                <v-card-title class="card-text">See What The<br/>University & Organizations Are Doing To Help With Energy Consumption</v-card-title>
-                </v-img>
-            </router-link>
-            <!--
-            <v-slide-y-transition mode="out-in" hide-on-leav="true">
-              <router-link to="/" v-if="UniVOrg">
+          <v-col md="6" id="university-steps" class="decision-col">
+            <router-link to="/">
               <v-img
-                src="../../assets/uiuc-greenhouse.jpg"
+                src="../../assets/grainger.jpg"
                 class="white--text align-end card-image rounded-xl"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.1), rgba(0,0,0,.8)">
-              <v-card-title class="card-text">Uni</v-card-title>
+              <v-card-title class="card-text">University</v-card-title>
               </v-img>
               </router-link>
-            </v-slide-y-transition>
-            <v-slide-y-transition mode="out-in" hide-on-leav="true">
-              <router-link to="/" v-if="UniVOrg">
-              <v-img
-                src="../../assets/uiuc-greenhouse.jpg"
-                class="white--text align-end card-image rounded-xl"
-                gradient="to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.1), rgba(0,0,0,.8)">
-              <v-card-title class="card-text">Organizaitons</v-card-title>
-              </v-img>
-              </router-link>
-            </v-slide-y-transition>-->
           </v-col>
-
-
         
         <v-col id="university-consumption" class="decision-col">
           <router-link to="/">
@@ -46,7 +23,7 @@
               src="../../assets/SolarPanels.jpg"
               class="white--text align-end card-image rounded-xl"
               gradient="to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.0), rgba(0,0,0,.8)">
-            <v-card-title class="card-text">See The University’s Specific Energy Consumption</v-card-title>
+            <v-card-title class="card-text">Organizatons</v-card-title>
             </v-img>
           </router-link>
         </v-col>
@@ -60,18 +37,11 @@
 <script>
 
 export default {
-  name: 'Learn-More-Energy',
-  data: () => ({
-      "UniVOrg": false
-    }),
+  name: 'Learn-More-Energy'
 }
 </script>
 
 <style scoped>
-
-.learn-more-energy-page {
-  
-}
 
 
   .decision-title {

@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import LearnMoreEnergy from '../views/decision/LearnMoreEnergy.vue'
+import UniVOrg from '../views/decision/UniVOrg.vue'
+import PledgeChoices from '../views/pledge/PledgeChoices.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +32,16 @@ const routes = [
     path: '/learn-more-energy',
     name: 'Learn-More-Energy',
     component: LearnMoreEnergy
+  },
+  {
+    path: '/uni-v-org',
+    name: 'UniVOrg',
+    component: UniVOrg
+  },
+  {
+    path: '/pledge-choices',
+    name: 'PledgeChoices',
+    component: PledgeChoices
   }
 ]
 

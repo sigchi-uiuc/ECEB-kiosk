@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main style="background: #13294b;">
+    <v-main style="background: #13294B;">
       <transition name="slide" mode="out-in">
         <router-view/>
       </transition>
@@ -36,7 +36,7 @@ export default {
   body {
     overflow: hidden;
     height: 100%;
-    background: #13294b !important;
+    background: #13294B;
   }
 
   .slide-leave-active,
