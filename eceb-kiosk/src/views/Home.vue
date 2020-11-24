@@ -1,5 +1,17 @@
 <template>
-  <div class="home-page page">
+  <div class="page" id="home-page">
+    
+    <div id="home-background">
+      <router-link :to="{ name: 'PledgeChoices'}">
+        <div class="blurred-box"/>
+      
+        <v-container class="prize-card">
+          <v-img class ="prize-card-image" src="../assets/google_home.png"/>
+          <div class="prize-card-text">Sign The Environmental Action Pledge For A Chance To Win A Google Home!</div>
+        </v-container>
+      </router-link>
+    </div>
+
     <v-container fluid id="home-title">
       <v-carousel cycle interval=10000 hide-delimiters :show-arrows=false>
       <v-carousel-item>
@@ -22,6 +34,8 @@
         Learn More About Electricity Consumption, And How You Can Make A Difference
       </v-container>
     </v-container>
+
+    
     
     <v-container fluid id="home-button-row"> 
       <!--
@@ -63,13 +77,34 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
-  .home-page {
-    background: linear-gradient(225deg, rgba(232,74,39,1) 30%, rgba(19,41,75,1) 100%);
+  #home-page {
     height: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  #home-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-25deg, #E84A27 30%, #13294B 60%, #618dcf 100%);
+    /*background: linear-gradient(225deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 100%);*/
+    background-size: 400% 400%;
+    animation: gradient 60s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   body.noScroll {
@@ -78,10 +113,10 @@ export default {
 
   #home-title {
     position: absolute;
-    width: 1438px;
+    width: 1350px;
     height: 500px;
     right: 73px;
-    top: 225px;
+    top: 100px;
 
     padding: 0;
     margin: 0;
@@ -124,7 +159,53 @@ export default {
 
     text-align: right;
     letter-spacing: -1px;
+  }
 
+  .blurred-box{
+    position: relative;
+    width: 440px;
+    height: 470px;
+    top: calc(50% - 175px);
+    left: 100px;
+    /*background: inherit;*/
+    background: rgb(179, 179, 179);
+    opacity: 0.2;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+/**
+    .blurred-box:after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    background: inherit; 
+    position: absolute;
+    left: -25px;
+    right: 0;
+    top: -25px;  
+    bottom: 0;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    filter: blur(10px);
+    }
+*/
+
+  .prize-card {
+    position: absolute;
+    top: calc(50% - 175px);
+    left: 125px;
+    width: 400px !important;
+    height: auto;
+  }
+
+  .prize-card-image {
+    width: 300px;
+    left: 35px;
+  }
+
+  .prize-card-text {
+    color: white;
+    font-family: Proxima Nova;
+    font-size: 30px;
   }
 
   #home-button-row {
@@ -169,26 +250,26 @@ export default {
   padding: 10px;
   background-color: #eee;
   overflow: hidden;
-}
-/* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.expand-enter, .expand-leave {
-  height: 0;
-  padding: 0 10px;
-  opacity: 0;
-}
+  }
+  /* .expand-enter defines the starting state for entering */
+  /* .expand-leave defines the ending state for leaving */
+  .expand-enter, .expand-leave {
+    height: 0;
+    padding: 0 10px;
+    opacity: 0;
+  }
 
-.slide1-enter-active, .slide1-leave-active {
-  transition-delay: 1s;
-  transition: .2s ease-out;
-}
+  .slide1-enter-active, .slide1-leave-active {
+    transition-delay: 1s;
+    transition: .2s ease-out;
+  }
 
-/*
-you set the css property before transition starts
-*/
-.slide1-enter, .slide1-leave-to {
-transform: translate(0, 200%);
-}
+  /*
+  you set the css property before transition starts
+  */
+  .slide1-enter, .slide1-leave-to {
+  transform: translate(0, 200%);
+  }
 
 
 </style>

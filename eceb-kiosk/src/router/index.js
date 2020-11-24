@@ -5,6 +5,8 @@ import About from '../views/About.vue'
 import LearnMoreEnergy from '../views/decision/LearnMoreEnergy.vue'
 import UniVOrg from '../views/decision/UniVOrg.vue'
 import PledgeChoices from '../views/pledge/PledgeChoices.vue'
+import PledgeForm from '../views/pledge/PledgeForm.vue'
+import UniversitySteps from '../views/info/UniversitySteps.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +44,18 @@ const routes = [
     path: '/pledge-choices',
     name: 'PledgeChoices',
     component: PledgeChoices
+  },
+  {
+    path: '/pledge-form',
+    name: 'PledgeForm',
+    component: PledgeForm
+    //props: { choices: falses}
+  },
+  {
+    path: '/university-steps',
+    name: 'UniversitySteps',
+    component: UniversitySteps
+    //props: { choices: falses}
   }
 ]
 

@@ -12,7 +12,7 @@
           <v-card color="white" @click="cardClick(index)" elevation="20" class="choice-card rounded-xl" :id="choice.pledge + '-card'" :key="choice.pledge + '-card'">
             <v-card-title style="font-size: 36px; color: black; font-weight: bold;">{{choice.pledge}}</v-card-title>
 
-            <v-card-text style="font-size: 24px;">{{choice.description}}</v-card-text>
+            <v-card-text style="font-size: 24px; line-height: 28px !important;">{{choice.description}}</v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -20,13 +20,18 @@
 
     <ul class="choice-list">
       <li id="choice-list-title">Pledges:</li>
-
       <div v-for="choice in choices" :key="choice.pledge + 'list'">
         <v-slide-y-transition mode="out-in" hide-on-leav="true">
-          <li v-if="choice.selected"> {{choice.pledge}} </li>
+          <li v-if="choice.selected" class="pledge-list-item"> {{choice.pledge}} </li>
         </v-slide-y-transition>
       </div>
     </ul>
+
+    <v-btn @click="openForm"  outlined class="next-button">
+      <span class="next-text"> NEXT </span>
+      <v-icon large>mdi-arrow-right</v-icon>
+    </v-btn>
+  
 
   </div>
 </template>
@@ -38,34 +43,34 @@ export default {
   data: () => ({
       "choices": [
         {
+          "pledge": "Replace Light Bulbs",
+          "selected": false,
+          "description": "Switch out the bulbs in your home with LED bulbs to use up to 75% less energy"
+        },
+        {
+          "pledge": "Adjust Thermosat",
+          "selected": false,
+          "description": "Turn thermostat up one degree in the summer (77-80°F; 25-27°C) and down 1 degree in the winter (64-68°F; 18-20°C)"
+        },
+        {
+          "pledge": "Use Less Appliances",
+          "selected": false,
+          "description": "Switch up your household routines! Ex: hand wash and dry dishes rather than using the dishwasher, hand-drying clothes instead of using the washer/dryer, etc."
+        },
+        {
           "pledge": "Turn Off Lights",
           "selected": false,
           "description": "Turn off lights in a room that you are no longer in (even if you know you’ll be coming back!)"
         },
         {
-          "pledge": "Thermosat",
+          "pledge": "Less Heated Water",
           "selected": false,
-          "description": "Turn thermostat up one degree in the summer (77-80°F; 25-27°C) and down 1 degree in the winter (64-68°F; 18-20°C)"
+          "description": "Limit the time your water is running when washing dishes, brushing your teeth, and showering (still shower)"
         },
         {
-          "pledge": "Option3",
+          "pledge": "Use Power Strips",
           "selected": false,
-          "description": "lol"
-        },
-        {
-          "pledge": "Option4",
-          "selected": false,
-          "description": "lol"
-        },
-        {
-          "pledge": "Option5",
-          "selected": false,
-          "description": "lol"
-        },
-        {
-          "pledge": "Option6",
-          "selected": false,
-          "description": "lol"
+          "description": "For multiple devices, using a single power strip rather than individual outlets can help save energy"
         }
       ]
     }),
@@ -74,8 +79,11 @@ export default {
         let choice = this.choices[index];
         choice.selected = !choice.selected;
         if(choice.selected)
-          document.getElementById(choice.pledge + "-card").style.cssText = "background-color: #ffa15e !important";
+          document.getElementById(choice.pledge + "-card").style.cssText = "background-color: #789fe3 !important";
         else document.getElementById(choice.pledge + "-card").style.cssText = "background-color: white !important";
+      },
+      openForm() {
+        this.$router.push({name: "PledgeForm", params:{choices: this.choices}});
       }
     }
 }
@@ -127,6 +135,10 @@ export default {
     margin-bottom: 50px;
   }
 
+  .choice-card:focus:before {
+    opacity: 0 !important;
+  }
+
   .choice-list {
     position: absolute;
     width: 400px;
@@ -134,10 +146,10 @@ export default {
     top: 250px;
 
     font-family: Proxima Nova;
-    font-size: 54px;
+    font-size: 40px;
     color: white;
 
-    transition: all 0s;
+    transition: all 0.66s ease-out;
   }
 
   #choice-list-title {
@@ -146,8 +158,33 @@ export default {
 
   }
 
+  .next-button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    height: 65px !important;
+
+    font-weight: bold !important;
+    font-family: Proxima Nova !important;
+    font-size: 36px !important;
+    letter-spacing: 4.5px !important;
+    color: white;
+    background: none;
+
+    padding: 50px 50px;
+  }
+
   ul {
     list-style: none;
+  }
+
+  .pledge-list-item {
+    transition: all 0.6s ease-out;
+  }
+
+  .next-text {
+    padding-right: 15px;
   }
 
 </style>

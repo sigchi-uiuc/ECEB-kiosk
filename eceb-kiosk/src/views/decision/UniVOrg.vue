@@ -7,7 +7,7 @@
       <v-row no-gutters class="decision-row">
         
           <v-col md="6" id="university-steps" class="decision-col">
-            <router-link to="/">
+            <router-link :to="{ name: 'UniversitySteps'}">
               <v-img
                 src="../../assets/grainger.jpg"
                 class="white--text align-end card-image rounded-xl"
@@ -20,7 +20,7 @@
         <v-col id="university-consumption" class="decision-col">
           <router-link to="/">
           <v-img
-              src="../../assets/SolarPanels.jpg"
+              src="../../assets/solarcar.jpg"
               class="white--text align-end card-image rounded-xl"
               gradient="to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.0), rgba(0,0,0,.8)">
             <v-card-title class="card-text">Organizatons</v-card-title>
@@ -47,7 +47,9 @@ export default {
   .decision-title {
     width: 100%;
     height: 125px;
-    background: linear-gradient(225deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 35%);
+    background: linear-gradient(-45deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 75%);
+    background-size: 200% 100%;
+    animation: gradient 30s ease infinite;
     margin: 0;
     padding: 0;
 
