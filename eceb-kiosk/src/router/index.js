@@ -7,6 +7,7 @@ import UniVOrg from '../views/decision/UniVOrg.vue'
 import PledgeChoices from '../views/pledge/PledgeChoices.vue'
 import PledgeForm from '../views/pledge/PledgeForm.vue'
 import UniversitySteps from '../views/info/UniversitySteps.vue'
+import WhyCare from '../views/info/WhyCare.vue'
 
 Vue.use(VueRouter)
 
@@ -56,6 +57,11 @@ const routes = [
     name: 'UniversitySteps',
     component: UniversitySteps
     //props: { choices: falses}
+  },
+  {
+    path: '/why-care',
+    name: 'WhyCare',
+    component: WhyCare
   }
 ]
 

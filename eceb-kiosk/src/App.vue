@@ -36,6 +36,7 @@ export default {
     overflow: hidden;
     background: #13294B;
     touch-action: none;
+
   }
 
   .slide-leave-active,

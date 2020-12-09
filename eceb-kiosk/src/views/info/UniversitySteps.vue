@@ -6,17 +6,23 @@
 
     <div id="university-steps-carousel">
       <v-carousel :show-arrows="false" :hide-delimiters="true" v-model="slide" height="758px">
-        <v-carousel-item v-for="slidedata in slidesData" :key="slidedata.title + '-slide'" class="university-steps-carousel-item">
+        <v-carousel-item v-for="slidedata in uniStepsData" :key="slidedata.title + '-slide'" class="university-steps-carousel-item">
 
-          <div class="blur text-card"></div>
 
-          <div class="carousel-title">
-            {{slidedata.title}}
+          <div v-if="slidedata.title == 'Overview'">
+            <v-img class ="overview-image" :src="require('../../assets/' + slidedata.image)"/>
           </div>
-          <div class="carousel-text">
-            {{latin}}
+          <div v-else>
+            <div class="blur text-card"></div>
+
+            <div class="carousel-title">
+              {{slidedata.title}}
+            </div>
+            <div class="carousel-text">
+              {{slidedata.description}}
+            </div>
+            <v-img class ="carousel-image" :src="require('../../assets/' + slidedata.image)"/>
           </div>
-          <v-img class ="carousel-image" :src="require('../../assets/' + slidedata.image)"/>
         
         </v-carousel-item>
         
@@ -37,33 +43,40 @@
 </template>
 
 <script>
+import {uniStepsData} from "./../../const";
 
 export default {
   name: 'UniversitySteps',
   data: () => ({
+    uniStepsData: uniStepsData,
+    /*
     slidesData: [
       {
         title: "Wind Power",
+        description: "hallo",
         image: "wind-power.jpg"
       },
       {
         title: "Solar Farms",
+        description: "hallo",
         image: "SolarPanels.jpg"
       },
       {
         title: "Energy Management",
+        description: "hallo",
         image: "green-energy.jpeg"
       },
       {
         title: "Option 4",
+        description: "hallo",
         image: "wind-power.jpg"
       }
-    ],
+    ],*/
+
     buttons: [
+      "Overview",
       "Wind Power",
-      "Solar Farms",
-      "Energy Management",
-      "Option 4"
+      "Solar Farms"
     ],
     slide: 0,
     active: 0,
@@ -187,6 +200,7 @@ export default {
     left: 165px;
     top: 110px;
     width: 920px;
+
   }
 
   .carousel-image {
@@ -195,6 +209,17 @@ export default {
     left: 1200px;
     width: 600px;
     height: 660px;
+    border-radius: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .overview-image {
+    position: absolute;
+    top: 0px;
+    left: 322px;
+    width: 1277px;
+    height: 730px;
     border-radius: 40px;
     padding: 0;
     margin: 0;
