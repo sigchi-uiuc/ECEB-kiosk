@@ -27,23 +27,33 @@
             </v-img>
           </router-link>
         </v-col>
+        
       </v-row>
       <!--<v-btn to="/" x-large id="back-button">Back</v-btn>-->
+    
     </v-container>
+    <div class="footer">
+      <Footer></Footer>
+      </div>
     
   </div>
+ 
 </template>
 
 <script>
-
+import Footer from "../../components/Footer.vue"
 export default {
-  name: 'Learn-More-Energy'
+  
+  name: 'Learn-More-Energy',
+ components : {
+   Footer
+ },
 }
 </script>
 
 <style scoped>
 
-
+  
   .decision-title {
     width: 100%;
     height: 125px;
