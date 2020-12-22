@@ -77,7 +77,9 @@ export default {
   .decision-title {
     width: 100%;
     height: 125px;
-    background: linear-gradient(225deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 35%);
+    background: linear-gradient(-45deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 75%);
+    background-size: 200% 100%;
+    animation: gradient 30s ease infinite;
     margin: 0;
     padding: 0;
 

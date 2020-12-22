@@ -28,15 +28,15 @@ export default {
 
 <style>
 
-  html {
-    overflow: hidden;
+  html, body{
+    width: 100%;
     height: 100%;
-  }
-
-  body {
+    max-width:100% !important;
+    max-height:100% !important;
     overflow: hidden;
-    height: 100%;
     background: #13294B;
+    touch-action: none;
+
   }
 
   .slide-leave-active,
