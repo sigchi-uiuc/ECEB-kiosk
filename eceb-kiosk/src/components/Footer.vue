@@ -1,6 +1,6 @@
 <template>
-  <v-card height="450px">
-    <v-footer
+  <div class="footer">
+    <div
       v-bind="localAttrs"
       padless="padless"
     >
@@ -37,8 +37,8 @@
           </v-btn>
         </v-col>
       </v-row>
-    </v-footer>
-  </v-card>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -60,14 +60,12 @@ export default {
 #home .v-btn {
   font-size: 30px;
   margin-left: 15px;
+  background: transparent !important;
 }
 #back .v-btn {
   margin-right: 30px;
   font-size: 30px;
-}
-
-.template{
-  background-color: "blue";
+  background: transparent !important;
 }
 
 </style>
