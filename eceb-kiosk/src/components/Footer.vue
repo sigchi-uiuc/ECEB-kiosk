@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div>
     <div>
       <v-row
       align="center"
