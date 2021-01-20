@@ -1,9 +1,6 @@
 <template>
   <div class="footer">
-    <div
-      v-bind="localAttrs"
-      padless="padless"
-    >
+    <div>
       <v-row
       align="center"
       justify="center">
