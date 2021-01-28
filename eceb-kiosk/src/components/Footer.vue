@@ -1,12 +1,10 @@
 <template>
-  <v-card height="450px">
-    <v-footer
-      v-bind="localAttrs"
-      padless="padless"
-    >
+  <div class="Footer">
+    <div>
       <v-row
       align="center"
-      justify="center">
+      justify="center"
+      id="buttons">
         <v-col
         align="center"
         id="back"
@@ -15,7 +13,7 @@
             <v-icon dark x-large>
               mdi-arrow-left
             </v-icon>
-              Back
+              BACK
           </v-btn>
         </v-col>
         <v-col
@@ -37,13 +35,17 @@
           </v-btn>
         </v-col>
       </v-row>
-    </v-footer>
-  </v-card>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Footer',
+  data: () => ({
+    padless: true,
+    absolue: true,
+  }),
   methods: {
     back() {
       this.$router.back(-1);
@@ -52,6 +54,15 @@ export default {
 }
 </script>
 <style scoped>
+.Footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+#buttons {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
 #pledge .v-btn {
   border-radius: 30px;
   font-size: 30px;
@@ -60,10 +71,12 @@ export default {
 #home .v-btn {
   font-size: 30px;
   margin-left: 15px;
+  background: transparent !important;
 }
 #back .v-btn {
   margin-right: 30px;
   font-size: 30px;
+  background: transparent !important;
 }
 
 .template{

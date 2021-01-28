@@ -4,15 +4,17 @@
       Why Care About Energy?
     </div>
 
+   <div class="footer">
+      <Footer></Footer>
+  </div>
     
-   
     
   </div>
 </template>
 
 <script>
 import {uniStepsData} from "./../../const";
-
+import Footer from "../../components/Footer.vue"
 export default {
   name: 'UniversitySteps',
   data: () => ({
@@ -30,7 +32,10 @@ export default {
   mounted() {
     let activeButton = document.getElementById(this.buttons[this.active] + "-button");
     activeButton.classList.add("selected");
-  }
+  },
+  components : {
+   Footer
+ },
 }
 </script>
 
