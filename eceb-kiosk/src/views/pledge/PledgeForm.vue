@@ -15,8 +15,9 @@
             </v-card>
         </v-col>
       </v-row>
+      
     </v-container>
-
+    
     <form id="signup-form" @submit.prevent="submitForm">
       <div class="form-field">
         <div class="form-field-label">Name</div>
@@ -27,12 +28,13 @@
         <input type="text" class="form-field-input" name="email" v-model="email" @blur="checkEmail"/>
         <div class="error-text" v-if=" emailError">Please Enter A Valid Email</div>
       </div>
-
+    
       <v-btn type="submit" outlined class="submit-button">
         <span class="submit-text"> SUBMIT </span>
         <v-icon large>mdi-arrow-right</v-icon>
       </v-btn>
     </form>
+    
 
   </div>
 </template>
@@ -98,7 +100,6 @@ export default {
 
     padding: 50px 50px;
   }
-
   .v-btn--active::before {
     opacity: 0 !important;
   }

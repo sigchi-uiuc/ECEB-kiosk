@@ -28,23 +28,26 @@
         
       </v-carousel>
     </div>
-
+    
     <v-row class="fill-height button-row" align="center" justify="center" no-gutters> 
       <v-col :md="12/buttons.size" v-for="(button, index) in buttons" :key="button + '-button'">
         <v-btn @click="slide = index" color="#13294B" class="carousel-button" :id="button + '-button'">
           {{button}}
         </v-btn>
+        
       </v-col>
-
+    
     </v-row>
-   
+  <div class="footer">
+      <Footer></Footer>
+    </div>
     
   </div>
 </template>
 
 <script>
 import {uniStepsData} from "./../../const";
-
+import Footer from "../../components/Footer.vue"
 export default {
   name: 'UniversitySteps',
   data: () => ({
@@ -102,6 +105,9 @@ export default {
   methods: {
 
   },
+  components : {
+   Footer
+ },
   mounted() {
     let activeButton = document.getElementById(this.buttons[this.active] + "-button");
     activeButton.classList.add("selected");

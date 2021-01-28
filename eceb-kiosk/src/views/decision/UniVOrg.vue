@@ -32,9 +32,9 @@
       <!--<v-btn to="/" x-large id="back-button">Back</v-btn>-->
     
     </v-container>
-    <div class="footer">
+    <div class="footer" >
       <Footer></Footer>
-      </div>
+    </div>
     
   </div>
  

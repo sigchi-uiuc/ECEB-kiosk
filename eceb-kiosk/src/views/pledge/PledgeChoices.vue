@@ -16,8 +16,22 @@
           </v-card>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col align= "left">
+      <v-btn @click="back"  outlined class="back-button">
+      <v-icon large>mdi-arrow-left</v-icon>
+      <span class="back-text"> BACK </span>
+    </v-btn>
+  </v-col>
+  <v-col align= "left">
+    <v-btn to="/"  class="home-button"  x-large>
+      <span class="home-text"> </span>
+      <v-icon dark x-large>mdi-home</v-icon>
+    </v-btn>
+    </v-col>
+    </v-row>
     </v-container>
-
+    
     <ul class="choice-list">
       <li id="choice-list-title">Pledges:</li>
       <div v-for="choice in choices" :key="choice.pledge + 'list'">
@@ -25,13 +39,15 @@
           <li v-if="choice.selected" class="pledge-list-item"> {{choice.pledge}} </li>
         </v-slide-y-transition>
       </div>
+      
     </ul>
-
+    
+  
     <v-btn @click="openForm"  outlined class="next-button">
       <span class="next-text"> NEXT </span>
       <v-icon large>mdi-arrow-right</v-icon>
     </v-btn>
-  
+    
 
   </div>
 </template>
@@ -84,7 +100,10 @@ export default {
       },
       openForm() {
         this.$router.push({name: "PledgeForm", params:{choices: this.choices}});
-      }
+      },
+      back() {
+      this.$router.back(-1);
+    }
     }
 }
 </script>
@@ -175,6 +194,33 @@ export default {
     padding: 50px 50px;
   }
 
+  .back-button {
+    position: absolute;
+    
+    height: 65px !important;
+
+    font-weight: bold !important;
+    font-family: Proxima Nova !important;
+    font-size: 36px !important;
+    letter-spacing: 4.5px !important;
+    color: white;
+    background: none;
+
+    padding: 50px 50px;
+  }
+  .home-button {
+    position: absolute;
+    background: transparent !important;
+    height: 65px !important;
+    
+    font-weight: bold !important;
+    font-family: Proxima Nova !important;
+    font-size: 40px !important;
+    letter-spacing: 4.5px !important;
+    color: white;
+
+    padding: 50px 50px;
+  }
   ul {
     list-style: none;
   }
@@ -187,4 +233,7 @@ export default {
     padding-right: 15px;
   }
 
+  .back-text {
+    padding-left: 15px;
+  }
 </style>

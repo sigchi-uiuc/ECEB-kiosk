@@ -53,17 +53,22 @@
       </v-row>
       <!--<v-btn to="/" x-large id="back-button">Back</v-btn>-->
     </v-container>
-    
+    <div class="footer" >
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <script>
-
-export default {
+import Footer from "../../components/Footer.vue"
+export default {  
   name: 'Learn-More-Energy',
   data: () => ({
       "UniVOrg": false
     }),
+    components : {
+   Footer
+ },
 }
 </script>
 
