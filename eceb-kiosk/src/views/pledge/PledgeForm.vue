@@ -69,7 +69,7 @@ export default {
         this.$router.push({name: "Home", params:{choices: this.choices}});
 
         //DB code
-        this.$firestore.ecebkiosk.add(
+        this.$firestore.ecebkiosk.doc(this.email).set(
           {
             name: this.name,
             email: this.email,
