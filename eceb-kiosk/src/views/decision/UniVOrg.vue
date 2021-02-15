@@ -12,13 +12,13 @@
                 src="../../assets/grainger.jpg"
                 class="white--text align-end card-image rounded-xl"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.1), rgba(0,0,0,.8)">
-              <v-card-title class="card-text">University</v-card-title>
+              <v-card-title class="card-text">University Steps</v-card-title>
               </v-img>
               </router-link>
           </v-col>
         
-        <v-col id="university-consumption" class="decision-col">
-          <router-link to="/">
+        <v-col id="organizaitons" class="decision-col">
+          <router-link :to="{ name: 'Rsos'}">
           <v-img
               src="../../assets/solarcar.jpg"
               class="white--text align-end card-image rounded-xl"
@@ -55,16 +55,16 @@ export default {
 
   
   .decision-title {
+    position: absolute;
     width: 100%;
-    height: 125px;
+    height: 100%;
     background: linear-gradient(-45deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 75%);
     background-size: 200% 100%;
     animation: gradient 30s ease infinite;
     margin: 0;
     padding: 0;
 
-    font-family: Proxima Nova;
-    font-weight: bold;
+    font-family: ProximaNovaBold;
     font-size: 48px;
     color: white;
     padding: 37px 75px;
@@ -72,7 +72,12 @@ export default {
   }
 
   #decision-buttons {
+    position: absolute;
     height: auto;
+    background: rgba(225, 225, 225, 0.5);
+    border-radius: 40px 40px 0px 0px;
+    height: 879px;
+    top: 125px !important;
   }
 
   .decision-row {
@@ -90,7 +95,7 @@ export default {
   }
 
   .card-text {
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     font-weight: normal;
     font-size: 54px;
     line-height: 54px;
@@ -102,7 +107,7 @@ export default {
   }
 
   .card-image {
-    height: 840px;
+    height: 855px;
   }
 
 

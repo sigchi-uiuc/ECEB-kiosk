@@ -120,15 +120,14 @@ export default {
   .info-title {
     position: absolute;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background: linear-gradient(-45deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 75%);
     background-size: 250% 100%;
     animation: gradient 45s ease infinite;
     margin: 0;
     padding: 0;
 
-    font-family: Proxima Nova;
-    font-weight: bold;
+    font-family: ProximaNovaBold;
     font-size: 54px;
     color: white;
     padding: 37px 75px;
@@ -161,7 +160,7 @@ export default {
     left: 2.5%;
     color: white;
 
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     font-size: 32px;
   }
 
@@ -191,9 +190,8 @@ export default {
   .carousel-title {
     position: relative;
     color: white;
-    font-family: Proxima Nova;
+    font-family: ProximaNovaBold;
     font-size: 48px;
-    font-weight: bold;
     left: 165px;
     top: 80px;
   }
@@ -201,11 +199,14 @@ export default {
   .carousel-text {
     position: relative;
     color: white;
-    font-family: Proxima Nova;
-    font-size: 36px;
+    font-family: ProximaNova;
+    font-size: 32px;
+    line-height: 36px;
     left: 165px;
     top: 110px;
     width: 920px;
+    height: 500px;
+    overflow-y: scroll;
 
   }
 

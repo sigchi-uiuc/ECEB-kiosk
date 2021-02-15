@@ -28,7 +28,10 @@
         <input type="text" class="form-field-input" name="email" v-model="email" @blur="checkEmail"/>
         <div class="error-text" v-if=" emailError">Please Enter A Valid Email</div>
       </div>
-    
+      <v-btn @click="back()" outlined class="back-button">
+        <v-icon large>mdi-arrow-left</v-icon>
+        <span class="submit-text"> BACK </span>
+      </v-btn>
       <v-btn type="submit" outlined class="submit-button">
         <span class="submit-text"> SUBMIT </span>
         <v-icon large>mdi-arrow-right</v-icon>
@@ -62,6 +65,9 @@ export default {
       },
       checkEmail() {
         this.emailError = !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.email));
+      },
+      back() {
+      this.$router.back(-1);
       }
     },
     created() {
@@ -90,9 +96,7 @@ export default {
     left: 1180px;
     top: 380px;
     height: 65px !important;
-
-    font-weight: bold !important;
-    font-family: Proxima Nova !important;
+    font-family: ProximaNovaBold !important;
     font-size: 36px !important;
     letter-spacing: 4.5px !important;
     color: white;
@@ -100,6 +104,22 @@ export default {
 
     padding: 50px 50px;
   }
+
+  .back-button {
+    position: absolute;
+    left: -380px;
+    top: 380px;
+    height: 65px !important;
+
+    font-family: ProximaNovaBold !important;
+    font-size: 36px !important;
+    letter-spacing: 4.5px !important;
+    color: white;
+    background: none;
+
+    padding: 50px 50px;
+  }
+
   .v-btn--active::before {
     opacity: 0 !important;
   }
@@ -109,8 +129,7 @@ export default {
     top: 80px;
     left: 80px;
 
-    font-family: Proxima Nova;
-    font-weight: bold;
+    font-family: ProximaNovaBold;
     font-size: 64px;
     color: white;
     line-height: 64px;
@@ -128,7 +147,7 @@ export default {
     width: 500px;
     height: auto;
 
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
 
     padding: 12x 12px;
     margin-bottom: 50px;
@@ -145,7 +164,7 @@ export default {
   }
 
   .form-field-label {
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     color: white;
     font-size: 40px;
   }
@@ -160,7 +179,7 @@ export default {
   }
 
   .error-text {
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     font-size: 36px;
     color: #d15e5e;
   }

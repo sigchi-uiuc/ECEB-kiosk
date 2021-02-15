@@ -16,17 +16,17 @@
         <v-carousel cycle interval=10000 hide-delimiters :show-arrows=false>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECE Building Has Saved 500 Polar Bears Now
+            The ECE Building Has Saved X Watts of Electricity
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECE Building Has Saved None Polar Bears Now
+            100 Students Have Signed The Environmental Action Pledge
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECE Building Has Saved 1 Polar Bears Now
+            The ECE Building Has Saved X Polar Bears Now
           </v-container>
         </v-carousel-item>
         </v-carousel>
@@ -43,9 +43,9 @@
     <transition name="slideDown">
       <v-container v-if="activated" fluid id="home-button-row"> 
         <v-btn :to="{ name: 'Learn-More-Energy'}"  outlined outine-width="2px" class="home-button">ENERGY AT UIUC</v-btn>
-        <v-btn :to="{ name: 'Learn-More-Energy'}"  outlined outine-width="2px" class="home-button">WHAT YOU CAN DO</v-btn>
+        <v-btn :to="{ name: 'Rsos'}"  outlined outine-width="2px" class="home-button">WHAT YOU CAN DO</v-btn>
         <v-btn :to="{ name: 'WhyCare'}"  outlined outine-width="2px" class="home-button">WHY YOU SHOULD CARE</v-btn>
-        <v-btn to="/pledge-choices" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
+        <v-btn :to="{name: 'PledgeChoices'}" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
       </v-container>
     </transition>
       
@@ -122,7 +122,7 @@ export default {
 
   #home-title {
     position: absolute;
-    width: 1350px;
+    width: 1400px;
     height: 500px;
     right: 73px;
     top: 175px;
@@ -139,9 +139,8 @@ export default {
     width: 1438px;
     height: 108px;
 
-    font-family: Proxima Nova;
+    font-family: ProximaNovaBold;
     font-style: normal;
-    font-weight: bold;
     font-size: 100px;
     line-height: 100px;
     text-align: right;
@@ -158,9 +157,8 @@ export default {
     right: 0;
     top: 300px;
 
-    font-family: Proxima Nova;
+    font-family: ProximaNovaBold;
     font-style: normal;
-    font-weight: bold;
     font-size: 32px;
     line-height: 56px;
     
@@ -198,8 +196,9 @@ export default {
 
   .prize-card-text {
     color: white;
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     font-size: 30px;
+    text-align: center;
   }
 
   #home-button-row {
@@ -218,9 +217,7 @@ export default {
 
   .home-button {
     color: white !important;
-
-    font-weight: bold !important;
-    font-family: Proxima Nova !important;
+    font-family: ProximaNovaBold !important;
     font-size: 24px !important;
     letter-spacing: 4.5px !important;
     
@@ -247,8 +244,7 @@ export default {
   .touch-to-begin-text {
     position: absolute;
     width: 100%;
-    font-family: Proxima Nova;
-    font-weight: bold;
+    font-family: ProximaNovaBold;
     font-size: 35px;
     color: white;
     opacity: 0.7;

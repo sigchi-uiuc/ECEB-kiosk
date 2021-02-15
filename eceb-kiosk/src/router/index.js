@@ -8,6 +8,8 @@ import PledgeChoices from '../views/pledge/PledgeChoices.vue'
 import PledgeForm from '../views/pledge/PledgeForm.vue'
 import UniversitySteps from '../views/info/UniversitySteps.vue'
 import WhyCare from '../views/info/WhyCare.vue'
+import Organizations from '../views/info/Organizations.vue'
+import Rsos from '../views/info/Rsos.vue'
 
 Vue.use(VueRouter)
 
@@ -62,7 +64,17 @@ const routes = [
     path: '/why-care',
     name: 'WhyCare',
     component: WhyCare
-  }
+  },
+  {
+    path: '/organizations',
+    name: 'Organizations',
+    component: Organizations
+  },
+  {
+    path: '/rsos',
+    name: 'Rsos',
+    component: Rsos
+  },
 ]
 
 const router = new VueRouter({

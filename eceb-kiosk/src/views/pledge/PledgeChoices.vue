@@ -128,8 +128,7 @@ export default {
     top: 80px;
     left: 80px;
 
-    font-family: Proxima Nova;
-    font-weight: bold;
+    font-family: ProximaNovaBold;
     font-size: 64px;
     color: white;
     line-height: 64px;
@@ -148,7 +147,7 @@ export default {
     height: 300px;
 
 
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
 
     padding: 12x 12px;
     margin-bottom: 50px;
@@ -164,7 +163,7 @@ export default {
     right: 10px;
     top: 250px;
 
-    font-family: Proxima Nova;
+    font-family: ProximaNova;
     font-size: 40px;
     color: white;
 
@@ -183,9 +182,7 @@ export default {
     bottom: 40px;
 
     height: 65px !important;
-
-    font-weight: bold !important;
-    font-family: Proxima Nova !important;
+    font-family: ProximaNovaBold !important;
     font-size: 36px !important;
     letter-spacing: 4.5px !important;
     color: white;
@@ -199,8 +196,7 @@ export default {
     
     height: 65px !important;
 
-    font-weight: bold !important;
-    font-family: Proxima Nova !important;
+    font-family: ProximaNovaBold !important;
     font-size: 36px !important;
     letter-spacing: 4.5px !important;
     color: white;
@@ -212,9 +208,8 @@ export default {
     position: absolute;
     background: transparent !important;
     height: 65px !important;
-    
-    font-weight: bold !important;
-    font-family: Proxima Nova !important;
+  
+    font-family: ProximaNovaBold !important;
     font-size: 40px !important;
     letter-spacing: 4.5px !important;
     color: white;

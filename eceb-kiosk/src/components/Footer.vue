@@ -58,10 +58,10 @@ export default {
     bottom: 0;
     position: absolute;
     width: 100%;
+    background: rgba(0, 0, 0, 0.3);
 }
 #buttons {
   margin-right: 5px;
-  margin-bottom: 10px;
 }
 #pledge .v-btn {
   border-radius: 30px;
@@ -71,11 +71,13 @@ export default {
 #home .v-btn {
   font-size: 30px;
   margin-left: 15px;
+  color: white;
   background: transparent !important;
 }
 #back .v-btn {
   margin-right: 30px;
   font-size: 30px;
+  color: white;
   background: transparent !important;
 }
 
