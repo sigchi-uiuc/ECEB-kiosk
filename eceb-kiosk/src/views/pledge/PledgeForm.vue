@@ -43,8 +43,11 @@
 </template>
 
 <script>
+import { db } from './firebase';
 
 export default {
+  
+
   name: 'PledgeForm',
   props:  {
     
@@ -56,12 +59,29 @@ export default {
     email: "",
     emailError: false
     }),
+     firestore() {
+      return {
+        ecebkiosk: db.collection('users'),
+      }
+    },
     methods: {
       submitForm() {
         if(this.emailError || this.name === "" || this.email === "") return false;
         console.log({name: this.name, email: this.email});
         // TODO: Wait to push to the router until the promise is complete
         this.$router.push({name: "Home", params:{choices: this.choices}});
+
+        //DB code
+        this.$firestore.ecebkiosk.doc(this.email).set(
+          {
+            name: this.name,
+            email: this.email,
+            choices: this.selectedChoices,
+            timestamp: new Date()
+          }
+        );
+        
+
       },
       checkEmail() {
         this.emailError = !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.email));
