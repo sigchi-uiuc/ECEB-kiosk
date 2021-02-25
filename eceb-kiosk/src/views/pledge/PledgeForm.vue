@@ -83,7 +83,6 @@ export default {
         let form = document.getElementById("signup-form")
         let name = form.elements["name"].value
         let email = form.elements["email"].value
-        console.log(email)
         if(this.checkEmail(email) || name === "" || email === "") return false;
         //console.log({name: this.name, email: this.email});
         // Start loading animation
@@ -118,12 +117,11 @@ export default {
         return this.emailError;
       },
       back() {
-      this.$router.back(-1);
+        this.$router.back(-1);
       },
       bringUpKeyboard(inputSelection) {
         if(this.currentSelection !== inputSelection) {
           this.currentSelection = inputSelection;
-          console.log("here");
           document.getElementById("form-inputs").classList.add("active");
           document.getElementById("form-keyboard").classList.add("active");
         }
@@ -145,7 +143,7 @@ export default {
         document.getElementById("form-field-input-name").value= this.name;
       },
       onKeyPress(button) {
-        console.log("button", button);
+        return button;
       },
       onInputChange(input) {
         if(this.currentSelection)
@@ -244,7 +242,7 @@ export default {
   #form-inputs {
     position: absolute;
     top: 0;
-    transition: all 1s;
+    transition: all 2s;
   }
 
   #form-inputs.active {
@@ -253,7 +251,6 @@ export default {
 
   .form-field {
     margin-bottom: 50px;
-    transition: all 3s;
   }
 
   .form-field-label {
@@ -286,7 +283,7 @@ export default {
     position: absolute;
     top: 480px ;
     width: 1000px;
-    transition: all 1s;
+    transition: all 2s;
   }
 
   #form-keyboard.active {

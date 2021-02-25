@@ -1,7 +1,7 @@
 <template>
   <div class="university-steps page">
     <div class="info-title">
-      University Steps
+      University Steps To Convserve Energy
     </div>
 
     <div id="university-steps-carousel">
@@ -9,17 +9,20 @@
         <v-carousel-item v-for="slidedata in uniStepsData" :key="slidedata.title + '-slide'" class="university-steps-carousel-item">
 
 
-          <div v-if="slidedata.title == 'Overview'">
+          <div v-if="slidedata.title == 'Energy Overview On Campus'">
             <v-img class ="overview-image" :src="require('../../assets/' + slidedata.image)"/>
           </div>
           <div v-else>
-            <div class="blur text-card"></div>
+            <div class="blur text-card">
 
-            <div class="carousel-title">
-              {{slidedata.title}}
-            </div>
-            <div class="carousel-text">
-              {{slidedata.description}}
+              <div class="carousel-title">
+                {{slidedata.title}}
+              </div>
+              <div class="carousel-text">
+                <div v-for="descriptionText in slidedata.description" :key="descriptionText" style="margin-bottom: 18px;">
+                  {{descriptionText}}
+                </div>
+              </div>
             </div>
             <v-img class ="carousel-image" :src="require('../../assets/' + slidedata.image)"/>
           </div>
@@ -38,7 +41,7 @@
       </v-col>
     
     </v-row>
-  <div class="footer">
+    <div class="footer">
       <Footer></Footer>
     </div>
     
@@ -52,32 +55,11 @@ export default {
   name: 'UniversitySteps',
   data: () => ({
     uniStepsData: uniStepsData,
-    /*
-    slidesData: [
-      {
-        title: "Wind Power",
-        description: "hallo",
-        image: "wind-power.jpg"
-      },
-      {
-        title: "Solar Farms",
-        description: "hallo",
-        image: "SolarPanels.jpg"
-      },
-      {
-        title: "Energy Management",
-        description: "hallo",
-        image: "green-energy.jpeg"
-      },
-      {
-        title: "Option 4",
-        description: "hallo",
-        image: "wind-power.jpg"
-      }
-    ],*/
 
     buttons: [
-      "Overview",
+      "ECEB",
+      "iCAP",
+      "Energy Overview",
       "Wind Power",
       "Solar Farms"
     ],
@@ -173,18 +155,17 @@ export default {
   }
 
   .blur {
-    background: rgb(179, 179, 179);
-    opacity: 0.2;
+    background: rgba(179, 179, 179, 0.2);
     border-radius: 40px;
     overflow: hidden;
   }
 
   .text-card {
     position: absolute;
-    width: 1000px;
-    height: 660px;
+    width: 1050px;
+    height: 680px;
     top: 50px;
-    left: 125px;
+    left: 75px;
   }
 
   .carousel-title {
@@ -192,21 +173,22 @@ export default {
     color: white;
     font-family: ProximaNovaBold;
     font-size: 48px;
-    left: 165px;
-    top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    top: 20px;
   }
 
   .carousel-text {
     position: relative;
     color: white;
     font-family: ProximaNova;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
-    left: 165px;
-    top: 110px;
-    width: 920px;
+    padding-left: 40px;
+    padding-right: 40px;
+    top: 40px;
+    
     height: 500px;
-    overflow-y: scroll;
 
   }
 
@@ -214,8 +196,8 @@ export default {
     position: absolute;
     top: 50px;
     left: 1200px;
-    width: 600px;
-    height: 660px;
+    width: 650px;
+    height: 680px;
     border-radius: 40px;
     padding: 0;
     margin: 0;

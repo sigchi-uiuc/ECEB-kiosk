@@ -14,8 +14,11 @@
         <div class="carousel-text">
           <ul>
             <li v-for="(group, index) in rsoData.groups" :key="rsoData.title + group.name + '-list-item'">
-              <v-btn @click="slide=index" :id="group.name + '-button'" class="group-button">
-                {{group.name}}
+              <v-btn @click="slide=index" :id="group.name + '-button'" color="#FFEBEE" class="group-button">
+                <span style="white-space: normal !important; max-width: 400px !important;">
+                  {{group.name}}
+                </span>
+                
               </v-btn>
             </li>
           </ul>
@@ -211,14 +214,19 @@ export default {
   .group-button {
     border-radius: 20px;
     font-family: ProximaNova;
-    font-size: 30px;
-    padding: 28px 30px !important;
+    width: 450px;
+    font-size: 26px;
+    height: inherit !important;
+    padding: 20px 20px !important;
     margin-bottom: 20px;
   }
 
   .group-button.selected {
     background-color: #cf9a61 !important;
-    
+  }
+
+  .group-button:hover:before {
+    opacity: 0 !important;
   }
 
 </style>
