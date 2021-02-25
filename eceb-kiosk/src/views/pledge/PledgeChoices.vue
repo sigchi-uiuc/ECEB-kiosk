@@ -69,9 +69,9 @@ export default {
           "description": "Turn thermostat up one degree in the summer (77-80°F; 25-27°C) and down 1 degree in the winter (64-68°F; 18-20°C)"
         },
         {
-          "pledge": "Use Less Appliances",
+          "pledge": "Unplug Appliances",
           "selected": false,
-          "description": "Switch up your household routines! Ex: hand wash and dry dishes rather than using the dishwasher, hand-drying clothes instead of using the washer/dryer, etc."
+          "description": "If you have old appliances that haven't been used for a while (such as a VCR), make sure to unplug it to save energy and possibly elimate a fire hazard."
         },
         {
           "pledge": "Turn Off Lights",

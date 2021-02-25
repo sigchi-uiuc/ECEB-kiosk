@@ -6,6 +6,7 @@ import LearnMoreEnergy from '../views/decision/LearnMoreEnergy.vue'
 import UniVOrg from '../views/decision/UniVOrg.vue'
 import PledgeChoices from '../views/pledge/PledgeChoices.vue'
 import PledgeForm from '../views/pledge/PledgeForm.vue'
+import PledgeFinish from '../views/pledge/PledgeFinish.vue'
 import UniversitySteps from '../views/info/UniversitySteps.vue'
 import WhyCare from '../views/info/WhyCare.vue'
 import Organizations from '../views/info/Organizations.vue'
@@ -55,6 +56,11 @@ const routes = [
     //props: { choices: falses}
   },
   {
+    path: '/pledge-finish',
+    name: 'PledgeFinish',
+    component: PledgeFinish
+  },
+  {
     path: '/university-steps',
     name: 'UniversitySteps',
     component: UniversitySteps
@@ -74,7 +80,7 @@ const routes = [
     path: '/rsos',
     name: 'Rsos',
     component: Rsos
-  },
+  }
 ]
 
 const router = new VueRouter({

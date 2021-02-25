@@ -33,8 +33,12 @@
         <span class="submit-text"> BACK </span>
       </v-btn>
       <v-btn type="submit" outlined class="submit-button">
-        <span class="submit-text"> SUBMIT </span>
-        <v-icon large>mdi-arrow-right</v-icon>
+        <div v-if="!submitLoading">
+          <span  class="submit-text"> SUBMIT </span>
+          <v-icon large>mdi-arrow-right</v-icon>
+        </div>
+        <v-progress-circular v-else-if="!submitFinish" indeterminate color="white" :size="40"></v-progress-circular>
+        <v-icon v-else color="white" :size="45"> mdi-checkbox-marked-circle </v-icon>
       </v-btn>
     </form>
     
@@ -57,7 +61,9 @@ export default {
     selectedChoices: [],
     name: "",
     email: "",
-    emailError: false
+    emailError: false,
+    submitLoading: false,
+    submitFinish: false
     }),
      firestore() {
       return {
@@ -65,11 +71,11 @@ export default {
       }
     },
     methods: {
-      submitForm() {
+      async submitForm() {
         if(this.emailError || this.name === "" || this.email === "") return false;
         console.log({name: this.name, email: this.email});
-        // TODO: Wait to push to the router until the promise is complete
-        this.$router.push({name: "Home", params:{choices: this.choices}});
+        // Start loading animation
+        this.submitLoading = true;
 
         //DB code
         this.$firestore.ecebkiosk.doc(this.email).set(
@@ -79,9 +85,21 @@ export default {
             choices: this.selectedChoices,
             timestamp: new Date()
           }
-        );
+        )
+        .then(async () => {
+          // Wait 1.5 seconds to give the illusion of the process taking time (Its actually close to instant)
+          await new Promise(r => setTimeout(r, 1500));
+          this.submitFinish = true;
+          await new Promise(r => setTimeout(r, 1250));
+          this.$router.push({name: "PledgeFinish"});
+          this.submitLoading = false;
+          this.submitFinish = false;
+        })
+        .catch((error) => {
+          this.submitLoading = false;
+          console.error("Error uploading document: ", error);
+        });
         
-
       },
       checkEmail() {
         this.emailError = !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.email));
@@ -115,14 +133,13 @@ export default {
     position: absolute;
     left: 1180px;
     top: 380px;
+    width: 255px;
     height: 65px !important;
     font-family: ProximaNovaBold !important;
     font-size: 36px !important;
     letter-spacing: 4.5px !important;
     color: white;
     background: none;
-
-    padding: 50px 50px;
   }
 
   .back-button {
