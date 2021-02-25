@@ -99,7 +99,13 @@ export default {
         else document.getElementById(choice.pledge + "-card").style.cssText = "background-color: white !important";
       },
       openForm() {
-        this.$router.push({name: "PledgeForm", params:{choices: this.choices}});
+        for(let choice of this.choices) {
+          // If a choice has been selected, move on to the pledge form
+          if(choice.selected) {
+            this.$router.push({name: "PledgeForm", params:{choices: this.choices}});
+            return;
+          }
+        }
       },
       back() {
       this.$router.back(-1);

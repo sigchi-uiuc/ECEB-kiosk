@@ -29,7 +29,7 @@ const store = new Vuex.Store({
 Vue.use(IdleVue, {
   eventEmitter: eventsHub,
   store,
-  idleTime: 8000, // 3 seconds
+  idleTime: 180000, // 3 seconds
   startAtIdle: false
 });
 
