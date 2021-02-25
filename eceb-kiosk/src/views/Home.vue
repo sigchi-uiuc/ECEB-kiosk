@@ -70,6 +70,19 @@ export default {
       //document.getElementById("bottom-touch-to-begin").classList.add = none;
       document.getElementById("main-info").classList.add("active");
     }
+  },
+  // If idle for a specific time, reverse animation so that the initial "touch to begin" state is active
+  onIdle() {
+    if (this.activated)
+      this.activated = false;
+      document.getElementById("main-info").classList.remove("active");
+  },
+  created() {
+    // Reload the page when returning from a timeout.  This allows the program to have automatic updates
+    if(this.$route.params.shouldReload) {
+      this.$route.params.shouldReload = false;
+      location.reload();
+    }
   }
 }
 </script>

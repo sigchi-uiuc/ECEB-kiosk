@@ -23,9 +23,14 @@ export default {
       //
     };
   },
+  // Return home when inactive for a certain period of time if not already on the home screen
+  onIdle() {
+    if (this.$route.name != "Home"/* || store.state.homeActivated*/)
+      this.$router.push({ name: "Home", params:{shouldReload: true} });
+  },
   // Prevent right clicking when the application is created
   created() {
-    document.addEventListener('contextmenu',  event => event.preventDefault()); 
+    //ocument.addEventListener('contextmenu',  event => event.preventDefault()); 
   }
 };
 </script>
