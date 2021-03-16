@@ -11,6 +11,7 @@ import UniversitySteps from '../views/info/UniversitySteps.vue'
 import WhyCare from '../views/info/WhyCare.vue'
 import Organizations from '../views/info/Organizations.vue'
 import Rsos from '../views/info/Rsos.vue'
+import EnergyData from '../views/info/Data.vue'
 
 Vue.use(VueRouter)
 
@@ -65,6 +66,11 @@ const routes = [
     name: 'UniversitySteps',
     component: UniversitySteps
     //props: { choices: falses}
+  },
+  {
+    path: '/energy-data',
+    name: 'EnergyData',
+    component: EnergyData
   },
   {
     path: '/why-care',

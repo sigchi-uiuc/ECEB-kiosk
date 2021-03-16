@@ -186,7 +186,7 @@ export default {
     line-height: 36px;
     padding-left: 40px;
     padding-right: 40px;
-    top: 40px;
+    top: 30px;
     
     height: 500px;
 

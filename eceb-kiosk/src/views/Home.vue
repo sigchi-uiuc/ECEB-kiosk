@@ -7,26 +7,26 @@
         <div class="blurred-box"/>
       
         <v-container class="prize-card">
-          <v-img class ="prize-card-image" src="../assets/google_home.png"/>
-          <div class="prize-card-text">Sign The Environmental Action Pledge For A Chance To Win A Google Home!</div>
+          <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
+          <div class="prize-card-text">Sign The Environmental Action Pledge For A Chance To Win A Solar Phone Charger!</div>
         </v-container>
       </router-link>
 
       <v-container fluid id="home-title">
-        <v-carousel cycle interval=10000 hide-delimiters :show-arrows=false>
+        <v-carousel cycle interval=15000 hide-delimiters :show-arrows=false>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECE Building Has Saved X Watts of Electricity
+            The ECEB is Committed to Becoming the Largest Net-Zero Energy Building in the U.S.
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            100 Students Have Signed The Environmental Action Pledge
+            11.82% of the University's Energy Consumption Comes From Renewable Sources
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECE Building Has Saved X Polar Bears Now
+            UIUC Plans To Achieve Carbon Neutrality by 2050 if Not Sooner
           </v-container>
         </v-carousel-item>
         </v-carousel>
@@ -100,7 +100,6 @@ export default {
     height: 100%;
     width: 100%;
     background: linear-gradient(-25deg, #E84A27 30%, #13294B 60%, #618dcf 100%);
-    /*background: linear-gradient(225deg, rgba(232,74,39,1) 0%, rgba(19,41,75,1) 100%);*/
     background-size: 400% 400%;
     animation: gradient 60s ease infinite;
   }
@@ -135,10 +134,10 @@ export default {
 
   #home-title {
     position: absolute;
-    width: 1400px;
+    width: 1500px;
     height: 500px;
     right: 73px;
-    top: 175px;
+    top: 100px;
 
     padding: 0;
     margin: 0;
@@ -149,7 +148,6 @@ export default {
 
     outline-width: 2px !important;
 
-    width: 1438px;
     height: 108px;
 
     font-family: ProximaNovaBold;
@@ -157,6 +155,7 @@ export default {
     font-size: 100px;
     line-height: 100px;
     text-align: right;
+    right: 0;
 
     color: white;
   }
@@ -168,7 +167,7 @@ export default {
     height: 88px;
 
     right: 0;
-    top: 300px;
+    top: 355px;
 
     font-family: ProximaNovaBold;
     font-style: normal;
@@ -183,9 +182,9 @@ export default {
 
   .blurred-box{
     position: absolute;
-    width: 440px;
+    width: 470px;
     height: 470px;
-    top: calc(50% - 145px);
+    top: calc(50% - 105px);
     left: 75px;
     /*background: inherit;*/
     background: rgb(179, 179, 179);
@@ -196,19 +195,21 @@ export default {
 
   .prize-card {
     position: absolute;
-    top: calc(50% - 145px);
-    left: 100px;
-    width: 400px !important;
+    top: calc(50% - 105px);
+    left: 80px;
+    width: 450px !important;
     height: auto;
   }
 
   .prize-card-image {
     width: 300px;
-    left: 35px;
+    left: 60px;
+    top: 10px;
   }
 
   .prize-card-text {
     color: white;
+    padding-top: 30px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;

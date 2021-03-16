@@ -17,7 +17,8 @@ export const uniStepsData = [
   },
   {
     title: "Wind Power",
-    description: ["The university is proactively shaping its energy enterprise through improved utility production, distribution, and monitoring methods and systems. Through dedicated energy conservation programs, such as Retrocommissioning, Energy Performance Contracting, campus-wide lighting retrofits, and building system upgrades, the campus has reduced energy consumption by 28% since 2008."],
+    description: ["A renewable porfolio standard, passed in 2007, has supported wind power in Illinois, which requires 25% renewable energy from electric companies by 2025.  The university is proactively shaping its energy enterprise through improved utility production, distribution, and monitoring methods and systems. Through dedicated energy conservation programs, such as Retrocommissioning, Energy Performance Contracting, campus-wide lighting retrofits, and building system upgrades, the campus has reduced energy consumption by 28% since 2008.",
+    "Though usually in the prairie, wind turbines can also be installed on top of a roof of a building. These rooftop wind turbines constitute one percent of the renewable energy market, and have a huge potential in urban and suburban areas. There is not a large market for them yet, but the benefits of these wind systems can include independence from the grid, and payback periods as little as five years. They demonstrate that it is possible for an individual residence to acheive 20 percent wind power in less than a year."],
     image: "wind-power.jpg"
   },
   {
@@ -173,3 +174,39 @@ export const whyCareData = [
     description: "Not only should we be focusing on the present world, we should also be thinking about leaving the earth in a better place for generations to come. If we want a cleaner environment for the future, the work starts now!"
   }
 ]
+
+export const envData = {
+  title: "envData",
+  groups: [
+    {
+      name: "Total Generation On Campus",
+      chart: "Total_Chart.png",
+      image: "uiuc_quad.jpeg"
+    },
+    {
+      name: "Solar Farm 1.0",
+      chart: "SolarFarm_Chart.png",
+      image: "SolarPanels.jpg"
+    },
+    {
+      name: "Building Research Council Laboratory (BRC)",
+      chart: "BRC_Chart.png",
+      image: "BRC.jpg"
+    },
+    {
+      name: "Business Instructional Facility (BIF)",
+      chart: "BIF_Chart.png",
+      image: "BIF.jpg"
+    },
+    {
+      name: "Electrical and Computer Engineering Building (ECEB)",
+      chart: "ECEB_Chart.png",
+      image: "eceb.jpg"
+    },
+    {
+      name: "Wassaja Hall",
+      chart: "Wassaja_Chart.png",
+      image: "wassaja.png"
+    },
+  ]
+}

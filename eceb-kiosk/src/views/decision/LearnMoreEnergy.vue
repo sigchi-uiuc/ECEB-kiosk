@@ -41,7 +41,7 @@
 
         
         <v-col id="university-consumption" class="decision-col">
-          <router-link to="/">
+          <router-link to="/energy-data">
           <v-img
               src="../../assets/SolarPanels.jpg"
               class="white--text align-end card-image rounded-xl"
