@@ -2,7 +2,7 @@ export const uniStepsData = [
   {
     title: "ECEB",
     description: ["The ECE Building acheived LEED platinum certification in November 2019, and it is striving for a net-zero energy certification. From a vast array of photovoltaic cells, to a chilled beam system to cool and heat the classroom tower, ECE wil accomplish a major campus addition with maximum space and minimal carbon footprint.",
-    "“This is no small achievement,” explains ECE Professor Phil Krein. “Currently the Department of Energy reports only eight net-zero energy buildings in the U.S., and the largest is only 14,000 square feet. To achieve this in a building nearly 20 times that size reflects the University’s sincere commitment to sustainable design while capturing the spirit of a department that’s always pushing the limits of technological innovation.”"],
+    "“Our building is the first large zero-net-energy facility in Illinois,” explains ECE Professor Phil Krein. “This really is a remarkable achievement for a large building with extensive laboratory activities in a highly variable climate. The design efforts, technology developments, renewable energy advances, and control practices that lead to this achievement have been years in the making. As you walk around the building, look for LED lighting, solar shading devices, an unusual water-cooled air conditioning system, and other features that help us reduce energy consumption in a uniquely collaborative space.”"],
     image: "eceb.jpg"
   },
   {

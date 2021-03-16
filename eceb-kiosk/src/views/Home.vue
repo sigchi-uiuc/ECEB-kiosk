@@ -16,17 +16,17 @@
         <v-carousel cycle interval=15000 hide-delimiters :show-arrows=false>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECEB is Committed to Becoming the Largest Net-Zero Energy Building in the U.S.
+            The ECEB Is Committed To Becoming One Of The Largest Net-Zero Energy Building In The U.S.
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            11.82% of the University's Energy Consumption Comes From Renewable Sources
+            11.8% Of The University's Energy Consumption Comes From Renewable Sources
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            UIUC Plans To Achieve Carbon Neutrality by 2050 if Not Sooner
+            UIUC Plans To Achieve Carbon Neutrality By 2050 If Not Sooner
           </v-container>
         </v-carousel-item>
         </v-carousel>
@@ -134,7 +134,7 @@ export default {
 
   #home-title {
     position: absolute;
-    width: 1500px;
+    width: 1700px;
     height: 500px;
     right: 73px;
     top: 100px;
