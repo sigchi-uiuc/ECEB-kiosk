@@ -4,6 +4,9 @@
     </div>
     <div id="pledge-choices-title">
       I Pledge To...
+      <div id="pledge-choices-subtitle">
+        Sign the pledge to conserve energy and help the environment!<br>You'll also been entered into a prize pool for the chance to win a solar phone charger!
+      </div>
     </div>
 
     <v-container id="choices-container">
@@ -138,6 +141,18 @@ export default {
     font-size: 64px;
     color: white;
     line-height: 64px;
+  }
+
+  #pledge-choices-subtitle {
+    position: absolute;
+    width: 1000px;
+
+    font-family: ProximaNova;
+    font-size: 26px;
+    line-height: 32px !important;
+    color: white;
+    line-height: 64px;
+    padding-top: 15px;
   }
 
   #choices-container {
