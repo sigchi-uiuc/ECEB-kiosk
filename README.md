@@ -1,5 +1,5 @@
 # eceb-kiosk
-The interactive display for two kiosks at UIUC's ECE building (in progress).  Developed by UIUC's ACM SIGCHI organization.
+The interactive display for two kiosks at UIUC's ECE building (in progress).  Developed by UIUC's ACM SIGCHI organization.  Deployed on http://ecebenergykiosk.web.illinois.edu/.
 
 ## About the project
 This repo will contain the web app that will be installed on two touch-screen enabled kiosks at the University of Illinois's Electrical and Compueer Engineering building.  The goal is to teach students and staff on the environmental impact of the building and how they can improve their own carbon
