@@ -5,7 +5,7 @@
     <div id="pledge-choices-title">
       I Pledge To...
       <div id="pledge-choices-subtitle">
-        Sign the pledge to conserve energy and help the environment!<br>You'll also been entered into a prize pool for the chance to win a solar phone charger!
+        Sign the pledge to conserve energy and help the environment!<br>If you sign up by Energy Efficiency Day (October 6th), you'll be entered to win a solar phone charger!
       </div>
     </div>
 
@@ -145,7 +145,7 @@ export default {
 
   #pledge-choices-subtitle {
     position: absolute;
-    width: 1000px;
+    width: 1200px;
 
     font-family: ProximaNova;
     font-size: 26px;

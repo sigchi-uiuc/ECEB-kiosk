@@ -175,6 +175,27 @@ export const whyCareData = [
   }
 ]
 
+export const eventData = [
+  {
+    title: "What is Illini Lights Out?",
+    description: "iSEE’s Illini Lights Out (ILO) program demonstrates the immense energy-saving impact of simply turning off the lights when you leave a classroom, lab, or study space. On a few Friday nights each month, volunteers gather to form mini lights-out brigades and tour campus buildings recording how many lights are left on (and shutting off as many as they can, of course). Volunteering takes about an hour and a half, and there are always snacks afterward! Thanks to a grant from the Student Sustainability Committee (SSC), ILO has multiple events you can take part in each semester!"
+  }
+]
+
+export const eventData2 = [
+  {
+    title: "What is Energy Efficiency Day?",
+    description: "Energy Efficiency Day (Oct. 6, 2021)  is a collaborative effort of dozens of energy efficiency advocacy groups around the United States, including the American Council for an Energy-Efficient Economy (ACEEE), Advanced Energy Economy, Alliance to Save Energy, Natural Resources Defense Council, the Regional Energy Efficiency Organizations and many others. The Energy Efficiency Day message is simple: “Save Money. Cut Pollution. Create Jobs.”"
+  }
+]
+
+export const sigchiData = [
+  {
+    title: "What is SIGCHI?",
+    description: "Energy Efficiency Day (Oct. 6, 2021)  is a collaborative effort of dozens of energy efficiency advocacy groups around the United States, including the American Council for an Energy-Efficient Economy (ACEEE), Advanced Energy Economy, Alliance to Save Energy, Natural Resources Defense Council, the Regional Energy Efficiency Organizations and many others. The Energy Efficiency Day message is simple: “Save Money. Cut Pollution. Create Jobs.”"
+  }
+]
+
 export const envData = {
   title: "envData",
   groups: [

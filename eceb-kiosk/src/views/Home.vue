@@ -5,12 +5,28 @@
     <div id="main-info">
       <router-link :to="{ name: 'PledgeChoices'}">
         <div class="blurred-box"/>
-      
         <v-container class="prize-card">
           <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
-          <div class="prize-card-text">Sign The Environmental Action Pledge For A Chance To Win A Solar Phone Charger!</div>
+          <div class="prize-card-text">Sign The Environmental Action Pledge To Enter To Win A Solar Phone Charger!</div>
         </v-container>
       </router-link>
+
+      <router-link :to="{ name: 'Event'}">
+        <div class="blurred-box-v2"/>
+        <v-container class="event-card">
+          <v-img class ="event-card-image" src="../assets/ilo.png"/>
+          <div class="event-card-text">Illini Night Lights Is Coming Up!  Learn More!</div>
+        </v-container>
+      </router-link>
+      <!--
+      <router-link :to="{ name: 'Event2'}">
+        <div class="blurred-box-v3"/>
+        <v-container class="event2-card">
+          <v-img class ="event-card-image" src="../assets/EnergyEfficiencyDay.png"/>
+          <div class="event2-card-text">Energy Efficiency Day Is October 6th!  Learn More!</div>
+        </v-container>
+      </router-link>
+      -->
 
       <v-container fluid id="home-title">
         <v-carousel cycle interval=15000 hide-delimiters :show-arrows=false>
@@ -30,9 +46,11 @@
           </v-container>
         </v-carousel-item>
         </v-carousel>
+        
         <v-container fluid id="subtitle-text">
           Learn More About Electricity Consumption And How You Can Make A Difference
         </v-container>
+        
       </v-container>
     </div>
 
@@ -48,6 +66,10 @@
         <v-btn :to="{name: 'PledgeChoices'}" outlined id="pledge-button" class="home-button">SIGN THE PLEDGE</v-btn>
       </v-container>
     </transition>
+
+    <router-link :to="{ name: 'SIGCHI'}">
+      <v-img class ="sigchi-logo" src="../assets/sigchi_logo.jpeg"/>
+    </router-link>
       
     <div @click="touched" v-if="!activated" id="touch-to-begin"></div>
   </div>
@@ -136,7 +158,7 @@ export default {
     position: absolute;
     width: 1700px;
     height: 500px;
-    right: 73px;
+    left: 80px;
     top: 100px;
 
     padding: 0;
@@ -154,8 +176,8 @@ export default {
     font-style: normal;
     font-size: 100px;
     line-height: 100px;
-    text-align: right;
-    right: 0;
+    text-align: left;
+    
 
     color: white;
   }
@@ -163,15 +185,15 @@ export default {
   #subtitle-text {
     position: absolute;
     
-    width: 480px;
+    width: 750px;
     height: 88px;
 
-    right: 0;
+    right: -70px;
     top: 355px;
 
     font-family: ProximaNovaBold;
     font-style: normal;
-    font-size: 32px;
+    font-size: 50px;
     line-height: 56px;
     
     color: white;
@@ -193,6 +215,32 @@ export default {
     overflow: hidden;
   }
 
+  .blurred-box-v2{
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    top: calc(50% - 105px);
+    left: 605px;
+    /*background: inherit;*/
+    background: rgb(179, 179, 179);
+    opacity: 0.2;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
+  .blurred-box-v3{
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    top: calc(50% - 105px);
+    left: 1135px;
+    /*background: inherit;*/
+    background: rgb(179, 179, 179);
+    opacity: 0.2;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
   .prize-card {
     position: absolute;
     top: calc(50% - 105px);
@@ -207,7 +255,46 @@ export default {
     top: 10px;
   }
 
+  .event-card-image {
+    width: 300px;
+    left: 69px;
+    top: 10px;
+    border-radius: 40px;
+  }
+
+  .event-card {
+    position: absolute;
+    top: calc(50% - 105px);
+    left: 610px;
+    width: 450px !important;
+    height: auto;
+  }
+
+  .event2-card {
+    position: absolute;
+    top: calc(50% - 105px);
+    left: 1140px;
+    width: 450px !important;
+    height: auto;
+  }
+
   .prize-card-text {
+    color: white;
+    padding-top: 40px;
+    font-family: ProximaNova;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .event-card-text {
+    color: white;
+    padding-top: 30px;
+    font-family: ProximaNova;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .event2-card-text {
     color: white;
     padding-top: 30px;
     font-family: ProximaNova;
@@ -330,6 +417,16 @@ export default {
   .slideDown-enter, .slideDown-leave-to {
     transform: translate(0,200%);
     opacity: 0;
+  }
+
+  .sigchi-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1800px;
+    top: 20px;
+    border-radius: 50%;
+    padding: 15px;
   }
 
 
