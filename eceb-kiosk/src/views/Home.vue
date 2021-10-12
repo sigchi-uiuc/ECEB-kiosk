@@ -67,9 +67,9 @@
       </v-container>
     </transition>
 
-    <router-link :to="{ name: 'SIGCHI'}">
+    <!--<router-link :to="{ name: 'SIGCHI'}">
       <v-img class ="sigchi-logo" src="../assets/sigchi_logo.jpeg"/>
-    </router-link>
+    </router-link>-->
       
     <div @click="touched" v-if="!activated" id="touch-to-begin"></div>
   </div>
