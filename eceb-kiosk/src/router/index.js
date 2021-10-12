@@ -12,6 +12,9 @@ import WhyCare from '../views/info/WhyCare.vue'
 import Organizations from '../views/info/Organizations.vue'
 import Rsos from '../views/info/Rsos.vue'
 import EnergyData from '../views/info/Data.vue'
+import Event from '../views/info/Event.vue'
+import Event2 from '../views/info/Event_2.vue'
+import SIGCHI from '../views/info/sigchi.vue'
 
 Vue.use(VueRouter)
 
@@ -86,6 +89,21 @@ const routes = [
     path: '/rsos',
     name: 'Rsos',
     component: Rsos
+  },
+  {
+    path: '/event',
+    name: 'Event',
+    component: Event
+  },
+  {
+    path: '/event2',
+    name: 'Event2',
+    component: Event2
+  },
+  {
+    path: '/sigchi',
+    name: 'SIGCHI',
+    component: SIGCHI
   }
 ]
 
