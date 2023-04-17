@@ -7,23 +7,26 @@
         <div class="blurred-box"/>
         <v-container class="prize-card">
           <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
-          <div class="prize-card-text">Sign The Environmental Action Pledge To Enter To Win A Solar Phone Charger!</div>
+          <!--<div class="prize-card-text">Sign The Environmental Action Pledge by October 5th To Enter To Win A Solar Phone Charger!</div>-->
+          <div class="prize-card-text">Sign The Environmental Action Pledge To Show Your Support!</div>
         </v-container>
       </router-link>
-
+      
       <router-link :to="{ name: 'Event'}">
         <div class="blurred-box-v2"/>
         <v-container class="event-card">
           <v-img class ="event-card-image" src="../assets/ilo.png"/>
-          <div class="event-card-text">Illini Night Lights Is Coming Up!  Learn More!</div>
+          <div class="event-card-text">Illini Lights Out Is Coming Up!  Learn More About How To Volunteer!</div>
         </v-container>
       </router-link>
-      <!--
+      
+<!--
+      
       <router-link :to="{ name: 'Event2'}">
         <div class="blurred-box-v3"/>
         <v-container class="event2-card">
           <v-img class ="event-card-image" src="../assets/EnergyEfficiencyDay.png"/>
-          <div class="event2-card-text">Energy Efficiency Day Is October 6th!  Learn More!</div>
+          <div class="event2-card-text">Energy Efficiency Day Is October 5th!  Learn More!</div>
         </v-container>
       </router-link>
       -->
@@ -32,7 +35,7 @@
         <v-carousel cycle interval=15000 hide-delimiters :show-arrows=false>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECEB Is Committed To Becoming One Of The Largest Net-Zero Energy Building In The U.S.
+            The ECEB Has Been Certified As A Net Zero Energy Building!
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
@@ -42,7 +45,7 @@
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            UIUC Plans To Achieve Carbon Neutrality By 2050 If Not Sooner
+            UIUC Plans To Achieve Carbon Neutrality By 2050
           </v-container>
         </v-carousel-item>
         </v-carousel>
@@ -50,8 +53,18 @@
         <v-container fluid id="subtitle-text">
           Learn More About Electricity Consumption And How You Can Make A Difference
         </v-container>
+
+        
+        <v-img id ="net-zero-logo" src="../assets/img_cert_ze.png"/>
+
+        <router-link :to="{ name: 'sigchi'}">
+          <v-img id ="sigchi-transparent" src="../assets/sigchi_transparent.png"/>
+        </router-link>
+        
         
       </v-container>
+
+        
     </div>
 
     <transition mode="out-in" name="slideDown">
@@ -72,6 +85,8 @@
     </router-link>-->
       
     <div @click="touched" v-if="!activated" id="touch-to-begin"></div>
+
+    
   </div>
 </template>
 
@@ -189,7 +204,7 @@ export default {
     height: 88px;
 
     right: -70px;
-    top: 355px;
+    top: 645px;
 
     font-family: ProximaNovaBold;
     font-style: normal;
@@ -200,6 +215,15 @@ export default {
 
     text-align: right;
     letter-spacing: -1px;
+  }
+
+  #net-zero-logo {
+    position: absolute;
+    
+    width: 420px;
+
+    right: -20px;
+    top: 185px;
   }
 
   .blurred-box{
@@ -328,10 +352,6 @@ export default {
     margin: 20px;
   }
 
-  #pledge-button {
-    
-  }
-
   .v-btn--outlined {
     border: thick solid currentColor !important;
   }
@@ -427,6 +447,17 @@ export default {
     top: 20px;
     border-radius: 50%;
     padding: 15px;
+  }
+
+  #sigchi-transparent {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: -80px;
+    border-radius: 50%;
+    outline: 2px;
+    border: 5px solid orange;
   }
 
 

@@ -102,7 +102,7 @@ const routes = [
   },
   {
     path: '/sigchi',
-    name: 'SIGCHI',
+    name: 'sigchi',
     component: SIGCHI
   }
 ]

@@ -15,13 +15,53 @@
           {{data.description}}
         </div>
       </li>
+      <!--<li class="bottom_row">
+        <div v-for="data in eventData2_bottom" :key="data.title + '-list-item'" class="data-list-item-2">        
+          <div class="data-title">
+            {{data.title}}:
+          </div>
+          <div class="data-description">
+            {{data.description}}
+          </div>
+        </div>
+        <div class="data-list-item-2">
+          <div class="data-title">
+            Learn More By Scanning The QR Code Below!QQQQ
+          </div>
+          <v-img class ="event-image" src="../../assets/IlliniLightsOut_QRCode.png"/>
+        </div>
+
+      </li>-->
+      <!--<li v-for="data in eventData2_bottom" :key="data.title + '-list-item'" class="data-list-item">        
+        <div class="data-title">
+          {{data.title}}:
+        </div>
+        <div class="data-description">
+          {{data.description}}
+        </div>
+      </li>
       <li class="data-list-item">
         <div class="data-title">
-          Learn More By Scanning The QR Code Below!
+          Learn More By Scanning The QR Code Below!QQQQ
         </div>
         <v-img class ="event-image" src="../../assets/IlliniLightsOut_QRCode.png"/>
-      </li>
+      </li>-->
     </ul>
+
+    <div v-for="data in eventData2_bottom" :key="data.title + '-list-item'" class="data-list-item-2">        
+          <div class="data-title">
+            {{data.title}}:
+          </div>
+          <div class="data-description">
+            {{data.description}}
+          </div>
+    </div>
+    <div class="data-list-item-3">
+        <div class="data-title">
+          Scan The QR Code To Sign Up!
+        </div>
+        <v-img class ="event-image" src="../../assets/ILO_QR_FA22.png"/>
+    </div>
 
     </div>
 
@@ -37,10 +77,12 @@
 <script>
 import Footer from "../../components/Footer.vue"
 import {eventData} from "../../const"
+import {eventData2_bottom} from "../../const"
 export default {
   name: 'WhyCare',
   data: () => ({
     eventData: eventData,
+    eventData2_bottom: eventData2_bottom
     }),
   methods: {
 
@@ -100,6 +142,32 @@ export default {
     padding: 15px;
   }
 
+  .data-list-item-2 {
+    width: 995px !important;
+    height: 390px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 29px;
+    background-color: rgba(0,0,40,0.5);
+    border-radius: 25px;
+    padding: 15px;
+    white-space: pre-line;
+  }
+
+  .data-list-item-3 {
+    position: absolute;
+    top: 420px;
+    left: 1060px;
+    width: 585px !important;
+    height: 390px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 29px;
+    background-color: rgba(0,0,40,0.5);
+    border-radius: 25px;
+    padding: 15px;
+  }
+
   .data-title {
     font-weight: bold;
     font-size: 40px;
@@ -107,9 +175,10 @@ export default {
   }
 
   .event-image {
-    width: 300px;
-    height: 300px;
-    left: 628px;
+    width: 290px;
+    height: 290px;
+    top: 5px;
+    left: 140px;
     border-radius: 40px;
   }
 
