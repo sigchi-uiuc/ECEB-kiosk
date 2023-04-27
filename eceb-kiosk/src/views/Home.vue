@@ -12,13 +12,14 @@
         </v-container>
       </router-link>
       
-      <router-link :to="{ name: 'Event'}">
+      <div @click="openGame">
         <div class="blurred-box-v2"/>
         <v-container class="event-card">
-          <v-img class ="event-card-image" src="../assets/ilo.png"/>
-          <div class="event-card-text">Illini Lights Out Is Coming Up!  Learn More About How To Volunteer!</div>
+          <v-img class ="event-card-image" src="../assets/gameLogo.png"/>
+          <div class="event-card-text">Play the new game <br> Solar Survivor to see how long your solar car can last!</div>
         </v-container>
-      </router-link>
+      </div>
+        
       
 <!--
       
@@ -106,6 +107,9 @@ export default {
       this.activated = true;
       //document.getElementById("bottom-touch-to-begin").classList.add = none;
       document.getElementById("main-info").classList.add("active");
+    },
+    openGame() {
+      window.open("https://www.game.ecebenergykiosk.web.illinois.edu","_self")
     }
   },
   // If idle for a specific time, reverse animation so that the initial "touch to begin" state is active
@@ -267,7 +271,7 @@ export default {
 
   .prize-card {
     position: absolute;
-    top: calc(50% - 105px);
+    top: calc(50% - 90px);
     left: 80px;
     width: 450px !important;
     height: auto;
@@ -280,8 +284,8 @@ export default {
   }
 
   .event-card-image {
-    width: 300px;
-    left: 69px;
+    width: 400px;
+    left: 25px;
     top: 10px;
     border-radius: 40px;
   }
@@ -304,7 +308,7 @@ export default {
 
   .prize-card-text {
     color: white;
-    padding-top: 40px;
+    padding-top: 30px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
@@ -312,7 +316,7 @@ export default {
 
   .event-card-text {
     color: white;
-    padding-top: 30px;
+    padding-top: 15px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
