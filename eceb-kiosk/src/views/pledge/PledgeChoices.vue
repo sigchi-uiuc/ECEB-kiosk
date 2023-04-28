@@ -5,7 +5,7 @@
     <div id="pledge-choices-title">
       I Pledge To...
       <div id="pledge-choices-subtitle">
-        Sign the pledge to conserve energy and help the environment!<br>If you sign up by Energy Efficiency Day (October 6th), you'll be entered to win a solar phone charger!
+        Sign the pledge to conserve energy and help the environment!<!--<br>If you sign up by Energy Efficiency Day (October 5th), you'll be entered to win a solar phone charger!-->
       </div>
     </div>
 

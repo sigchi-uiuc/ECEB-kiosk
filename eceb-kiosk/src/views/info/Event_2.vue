@@ -15,7 +15,7 @@
           {{data.description}}
         </div>
       </li>
-      <li class="data-list-item">
+      <li class="data-list-item qr">
         <div class="data-title">
           Learn More By Scanning The QR Code Below!
         </div>
@@ -40,7 +40,7 @@ import {eventData2} from "../../const"
 export default {
   name: 'WhyCare',
   data: () => ({
-    eventData2: eventData2,
+    eventData2: eventData2
     }),
   methods: {
 
@@ -98,23 +98,48 @@ export default {
     background-color: rgba(0,0,40,0.5);
     border-radius: 25px;
     padding: 15px;
+    width: 1200px;
+    height: 785px;
   }
 
   .data-title {
     font-weight: bold;
     font-size: 40px;
     color: #7eaffc;
+    line-height: 100%;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+  }
+
+  .data-description {
+    padding-right: 25px;
+    white-space: pre-line;
+    padding: 20px;
+
   }
 
   .event-image {
-    width: 300px;
-    height: 300px;
-    left: 628px;
+    width: 285px;
+    height: 285px;
+    left: 35px;
     border-radius: 40px;
+    top: 105px;
   }
 
   ul {
     padding-left: 0;
+
+  }
+
+  ul li {
+
+        float: left;
+  }
+
+  .qr {
+    margin-left: 20px;
+    width: 385px;
   }
 
 </style>

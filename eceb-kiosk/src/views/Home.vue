@@ -7,23 +7,27 @@
         <div class="blurred-box"/>
         <v-container class="prize-card">
           <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
-          <div class="prize-card-text">Sign The Environmental Action Pledge To Enter To Win A Solar Phone Charger!</div>
+          <!--<div class="prize-card-text">Sign The Environmental Action Pledge by October 5th To Enter To Win A Solar Phone Charger!</div>-->
+          <div class="prize-card-text">Sign The Environmental Action Pledge To Show Your Support!</div>
         </v-container>
       </router-link>
-
-      <router-link :to="{ name: 'Event'}">
+      
+      <div @click="openGame">
         <div class="blurred-box-v2"/>
         <v-container class="event-card">
-          <v-img class ="event-card-image" src="../assets/ilo.png"/>
-          <div class="event-card-text">Illini Night Lights Is Coming Up!  Learn More!</div>
+          <v-img class ="event-card-image" src="../assets/gameLogo.png"/>
+          <div class="event-card-text">Play the new game <br> Solar Survivor to see how long your solar car can last!</div>
         </v-container>
-      </router-link>
-      <!--
+      </div>
+        
+      
+<!--
+      
       <router-link :to="{ name: 'Event2'}">
         <div class="blurred-box-v3"/>
         <v-container class="event2-card">
           <v-img class ="event-card-image" src="../assets/EnergyEfficiencyDay.png"/>
-          <div class="event2-card-text">Energy Efficiency Day Is October 6th!  Learn More!</div>
+          <div class="event2-card-text">Energy Efficiency Day Is October 5th!  Learn More!</div>
         </v-container>
       </router-link>
       -->
@@ -32,7 +36,7 @@
         <v-carousel cycle interval=15000 hide-delimiters :show-arrows=false>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            The ECEB Is Committed To Becoming One Of The Largest Net-Zero Energy Building In The U.S.
+            The ECEB Has Been Certified As A Net Zero Energy Building!
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
@@ -42,7 +46,7 @@
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            UIUC Plans To Achieve Carbon Neutrality By 2050 If Not Sooner
+            UIUC Plans To Achieve Carbon Neutrality By 2050
           </v-container>
         </v-carousel-item>
         </v-carousel>
@@ -50,8 +54,18 @@
         <v-container fluid id="subtitle-text">
           Learn More About Electricity Consumption And How You Can Make A Difference
         </v-container>
+
+        
+        <v-img id ="net-zero-logo" src="../assets/img_cert_ze.png"/>
+
+        <router-link :to="{ name: 'sigchi'}">
+          <v-img id ="sigchi-transparent" src="../assets/sigchi_transparent.png"/>
+        </router-link>
+        
         
       </v-container>
+
+        
     </div>
 
     <transition mode="out-in" name="slideDown">
@@ -72,6 +86,8 @@
     </router-link>-->
       
     <div @click="touched" v-if="!activated" id="touch-to-begin"></div>
+
+    
   </div>
 </template>
 
@@ -91,6 +107,9 @@ export default {
       this.activated = true;
       //document.getElementById("bottom-touch-to-begin").classList.add = none;
       document.getElementById("main-info").classList.add("active");
+    },
+    openGame() {
+      window.open("https://www.game.ecebenergykiosk.web.illinois.edu","_self")
     }
   },
   // If idle for a specific time, reverse animation so that the initial "touch to begin" state is active
@@ -189,7 +208,7 @@ export default {
     height: 88px;
 
     right: -70px;
-    top: 355px;
+    top: 645px;
 
     font-family: ProximaNovaBold;
     font-style: normal;
@@ -200,6 +219,15 @@ export default {
 
     text-align: right;
     letter-spacing: -1px;
+  }
+
+  #net-zero-logo {
+    position: absolute;
+    
+    width: 420px;
+
+    right: -20px;
+    top: 185px;
   }
 
   .blurred-box{
@@ -243,7 +271,7 @@ export default {
 
   .prize-card {
     position: absolute;
-    top: calc(50% - 105px);
+    top: calc(50% - 90px);
     left: 80px;
     width: 450px !important;
     height: auto;
@@ -256,8 +284,8 @@ export default {
   }
 
   .event-card-image {
-    width: 300px;
-    left: 69px;
+    width: 400px;
+    left: 25px;
     top: 10px;
     border-radius: 40px;
   }
@@ -280,7 +308,7 @@ export default {
 
   .prize-card-text {
     color: white;
-    padding-top: 40px;
+    padding-top: 30px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
@@ -288,7 +316,7 @@ export default {
 
   .event-card-text {
     color: white;
-    padding-top: 30px;
+    padding-top: 15px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
@@ -326,10 +354,6 @@ export default {
     height: 110px !important;
 
     margin: 20px;
-  }
-
-  #pledge-button {
-    
   }
 
   .v-btn--outlined {
@@ -427,6 +451,17 @@ export default {
     top: 20px;
     border-radius: 50%;
     padding: 15px;
+  }
+
+  #sigchi-transparent {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: -80px;
+    border-radius: 50%;
+    outline: 2px;
+    border: 5px solid orange;
   }
 
 

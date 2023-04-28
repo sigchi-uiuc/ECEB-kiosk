@@ -7,7 +7,32 @@
     <div id="blur-card">
 
     <ul id="why-care-data-list">
-      <li v-for="data in eventData2" :key="data.title + '-list-item'" class="data-list-item">        
+      <li class="data-list-item">        
+        <div class="data-title">
+          What Is SIGCHI?
+        </div>
+        <div class="data-description">
+          SIGCHI is an RSO at UIUC that stands for 'Special Interest Group for Computer-Human Interaction'. We're part of the largest Computer Science group on campus, ACM (Association for Computing Machinery). We made all the software for this kiosk, and we love making new projects every year! Scan the QR code to join our Discord to learn more!
+        </div>
+      </li>
+      <!--<li class="bottom_row">
+        <div v-for="data in eventData2_bottom" :key="data.title + '-list-item'" class="data-list-item-2">        
+          <div class="data-title">
+            {{data.title}}:
+          </div>
+          <div class="data-description">
+            {{data.description}}
+          </div>
+        </div>
+        <div class="data-list-item-2">
+          <div class="data-title">
+            Learn More By Scanning The QR Code Below!QQQQ
+          </div>
+          <v-img class ="event-image" src="../../assets/IlliniLightsOut_QRCode.png"/>
+        </div>
+
+      </li>-->
+      <!--<li v-for="data in eventData2_bottom" :key="data.title + '-list-item'" class="data-list-item">        
         <div class="data-title">
           {{data.title}}:
         </div>
@@ -17,11 +42,29 @@
       </li>
       <li class="data-list-item">
         <div class="data-title">
-          Learn More By Scanning The QR Code Below!
+          Learn More By Scanning The QR Code Below!QQQQ
         </div>
-        <v-img class ="event-image" src="../../assets/EnergyEfficiencyDay_QRCode.png"/>
-      </li>
+        <v-img class ="event-image" src="../../assets/IlliniLightsOut_QRCode.png"/>
+      </li>-->
     </ul>
+
+    <div class="data-list-item-2">        
+          <div class="data-title credits-title">
+            Project Credits
+          </div>
+          <div class="data-description credits">
+            Team Lead: Mitchell Bifeld
+          </div>
+          <div class="data-description credits">
+            Backend Lead: Smit Purohit
+          </div>
+    </div>
+    <div class="data-list-item-3">
+        <div class="data-title">
+          Scan To Join Our Discord!
+        </div>
+        <v-img class ="event-image" src="../../assets/sigchi_qrcode.png"/>
+    </div>
 
     </div>
 
@@ -36,11 +79,13 @@
 
 <script>
 import Footer from "../../components/Footer.vue"
-import {eventData2} from "../../const"
+import {sigchiData} from "../../const"
+import {sigchiData2_bottom} from "../../const"
 export default {
-  name: 'WhyCare',
+  name: 'SIGCHI',
   data: () => ({
-    eventData2: eventData2,
+    eventData: sigchiData,
+    eventData2_bottom: sigchiData2_bottom
     }),
   methods: {
 
@@ -100,6 +145,34 @@ export default {
     padding: 15px;
   }
 
+  .data-list-item-2 {
+    width: 995px !important;
+    height: 390px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 29px;
+    background-color: rgba(0,0,40,0.5);
+    border-radius: 25px;
+    padding: 15px;
+    white-space: pre-line;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .data-list-item-3 {
+    position: absolute;
+    top: 322px;
+    left: 1060px;
+    width: 585px !important;
+    height: 390px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 29px;
+    background-color: rgba(0,0,40,0.5);
+    border-radius: 25px;
+    padding: 15px;
+  }
+
   .data-title {
     font-weight: bold;
     font-size: 40px;
@@ -107,10 +180,19 @@ export default {
   }
 
   .event-image {
-    width: 300px;
-    height: 300px;
-    left: 628px;
+    width: 290px;
+    height: 290px;
+    top: 5px;
+    left: 140px;
     border-radius: 40px;
+  }
+
+  .credits-title {
+    font-size: 45px;
+  }
+
+  .credits {
+    font-size: 35px;
   }
 
   ul {

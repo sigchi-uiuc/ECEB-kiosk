@@ -1,0 +1,15 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ECEB Kiosk Game",
+"productVersion": "1.5.0",
+"dataUrl": "2019Game.data.unityweb",
+"wasmCodeUrl": "2019Game.wasm.code.unityweb",
+"wasmFrameworkUrl": "2019Game.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.40f1"
+}

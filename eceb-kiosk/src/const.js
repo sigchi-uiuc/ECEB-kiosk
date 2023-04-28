@@ -185,14 +185,28 @@ export const eventData = [
 export const eventData2 = [
   {
     title: "What is Energy Efficiency Day?",
-    description: "Energy Efficiency Day (Oct. 6, 2021)  is a collaborative effort of dozens of energy efficiency advocacy groups around the United States, including the American Council for an Energy-Efficient Economy (ACEEE), Advanced Energy Economy, Alliance to Save Energy, Natural Resources Defense Council, the Regional Energy Efficiency Organizations and many others. The Energy Efficiency Day message is simple: “Save Money. Cut Pollution. Create Jobs.”"
+    description: "Energy Efficiency Day, coming up on October 6th, is a collaborative effort of dozens of energy efficiency advocacy groups around the United States. \nThe Energy Efficiency Day message is simple: 'Save Money. Cut Pollution. Create Jobs.' Since the inaugural Energy Efficiency Day in 2016, this annual awareness event has been supported by hundreds of prominent organizations, companies, government agencies and others. Our goal is to share tips, tools and stories that promote the multiple benefits of energy efficiency, from lower costs to healthier homes. \nEnergy efficiency is the cheapest, quickest way to meet our energy needs, cut consumer bills and reduce pollution. Energy efficiency is also an economic engine, supporting over two million jobs nationwide in manufacturing, construction and other fields – most of which can’t be outsourced overseas. \nWe hope you’ll share your own energy efficiency success stories on October 6. Please remember to use the hashtag #EEDay2022 on all your online posts!"
   }
 ]
 
 export const sigchiData = [
   {
-    title: "What is SIGCHI?",
-    description: "Energy Efficiency Day (Oct. 6, 2021)  is a collaborative effort of dozens of energy efficiency advocacy groups around the United States, including the American Council for an Energy-Efficient Economy (ACEEE), Advanced Energy Economy, Alliance to Save Energy, Natural Resources Defense Council, the Regional Energy Efficiency Organizations and many others. The Energy Efficiency Day message is simple: “Save Money. Cut Pollution. Create Jobs.”"
+    title: "What Is SIGCHI?",
+    description: "SIGCHI is an RSO at UIUC that stands for 'Special Interest Group for Computer-Human Interaction'. We're part of the largest Computer Science group on campus, ACM (Association for Computing Machinery). We made all the software for this kiosk, and we love making new projects every year! Scan the QR code to join our Discord to learn more!"
+  }
+]
+
+export const sigchiData2_bottom = [
+  {
+    title: "Who is SIGCHI?",
+    description: "SIGCHI is an RSO at UIUC that stands for 'Special Interest Group for Computer-Human Interaction'. We're part of the largest Computer Science group on campus, ACM (Association for Computing Machinery.)"
+  }
+]
+
+export const eventData2_bottom = [
+  {
+    title: "Upcoming Dates",
+    description: "Jan. 27 • Feb. 10 • Feb. 24 • March 24 • April 21\nIllinois students can volunteer their time from 5:30 to 7 p.m. on these dates to shut off lights in campus buildings for the weekend. Sign up for this monthly event via the QR code, meet at the Foreign Languages Building lobby to get your assignment, and go save some energy! Get a free cookie when you turn in your tally sheets!\nAn average of over 125 volunteers help out at each event!"
   }
 ]
 
