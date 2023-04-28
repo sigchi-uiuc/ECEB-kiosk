@@ -15,7 +15,6 @@ import EnergyData from '../views/info/Data.vue'
 import Event from '../views/info/Event.vue'
 import Event2 from '../views/info/Event_2.vue'
 import SIGCHI from '../views/info/sigchi.vue'
-import Game from '../views/Game.vue'
 
 Vue.use(VueRouter)
 
@@ -105,11 +104,6 @@ const routes = [
     path: '/sigchi',
     name: 'sigchi',
     component: SIGCHI
-  },
-  {
-    path: '/game',
-    name: 'game',
-    component: Game
   }
 ]
 
