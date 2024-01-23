@@ -11,9 +11,9 @@
 
     <v-container id="choices-container">
       <v-row no-gutters>
-        <v-col md="4" v-for="(choice, index) in choices" :key="choice.pledge">
+        <v-col md="3" v-for="(choice, index) in choices" :key="choice.pledge">
           <v-card color="white" @click="cardClick(index)" elevation="20" class="choice-card rounded-xl" :id="choice.pledge + '-card'" :key="choice.pledge + '-card'">
-            <v-card-title style="font-size: 36px; color: black; font-weight: bold;">{{choice.pledge}}</v-card-title>
+            <v-card-title style="font-size: 28px; color: black; font-weight: bold;">{{choice.pledge}}</v-card-title>
 
             <v-card-text style="font-size: 24px; line-height: 28px !important;">{{choice.description}}</v-card-text>
           </v-card>
@@ -90,6 +90,16 @@ export default {
           "pledge": "Use Power Strips",
           "selected": false,
           "description": "For multiple devices, using a single power strip rather than individual outlets can help save energy"
+        },
+        {
+          "pledge": "Use A Water Bottle",
+          "selected": false,
+          "description": "Limit the use of plastic water bottles. Instead, use eco friendly, reusable water bottles for drinking"
+        },
+        {
+          "pledge": "Take Public Transit",
+          "selected": false,
+          "description": "Take public transportation such as trains and buses instead of cars. For shorter distances you can opt for biking or walking"
         }
       ]
     }),
@@ -164,7 +174,7 @@ export default {
   }
 
   .choice-card {
-    width: 400px;
+    width: 320px;
     height: 300px;
 
 
