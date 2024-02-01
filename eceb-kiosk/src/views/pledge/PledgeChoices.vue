@@ -94,7 +94,7 @@ export default {
         {
           "pledge": "Use Water Bottle",
           "selected": false,
-          "description": "Limit the use of plastic water bottles. Instead, use eco friendly, reusable water bottles for drinking"
+          "description": "Limit the use of single-use plastic water bottles. Instead, use eco friendly, reusable water bottles for drinking"
         },
         {
           "pledge": "Take Public Transit",
