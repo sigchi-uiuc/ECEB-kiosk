@@ -11,14 +11,24 @@
           <div class="prize-card-text">Sign The Environmental Action Pledge To Show Your Support!</div>
         </v-container>
       </router-link>
+
+      <router-link :to="{ name: 'Events'}">
+        <div class="blurred-box-v2"/>
+        <v-container class="event-card">
+          <v-img class ="event-card-image" src="../assets/team_work.jpg"/>
+          <div class="event-card-text">Check out upcoming events <br> to see how you can get involved!</div>
+        </v-container>
+
+
+      </router-link>
       
-      <div @click="openGame">
+      <!-- <div @click="openGame">
         <div class="blurred-box-v2"/>
         <v-container class="event-card">
           <v-img class ="event-card-image" src="../assets/gameLogo.png"/>
           <div class="event-card-text">Play the new game <br> Solar Survivor to see how long your solar car can last!</div>
         </v-container>
-      </div>
+      </div> -->
         
       
 <!--
@@ -285,6 +295,7 @@ export default {
 
   .event-card-image {
     width: 400px;
+    height: 295px;
     left: 25px;
     top: 10px;
     border-radius: 40px;
