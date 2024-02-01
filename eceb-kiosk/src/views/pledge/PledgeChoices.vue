@@ -92,7 +92,7 @@ export default {
           "description": "For multiple devices, using a single power strip rather than individual outlets can help save energy"
         },
         {
-          "pledge": "Use A Water Bottle",
+          "pledge": "Use Water Bottle",
           "selected": false,
           "description": "Limit the use of plastic water bottles. Instead, use eco friendly, reusable water bottles for drinking"
         },
