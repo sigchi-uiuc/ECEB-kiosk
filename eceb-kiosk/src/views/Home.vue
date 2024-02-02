@@ -8,7 +8,7 @@
         <v-container class="prize-card">
           <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
           <!--<div class="prize-card-text">Sign The Environmental Action Pledge by October 5th To Enter To Win A Solar Phone Charger!</div>-->
-          <div class="prize-card-text">Sign The Environmental Action Pledge To Show Your Support!</div>
+          <div class="prize-card-text">Sign the Environmental Action Pledge to show your support!</div>
         </v-container>
       </router-link>
 
@@ -16,19 +16,17 @@
         <div class="blurred-box-v2"/>
         <v-container class="event-card">
           <v-img class ="event-card-image" src="../assets/team_work.jpg"/>
-          <div class="event-card-text">Check out upcoming events <br> to see how you can get involved!</div>
+          <div class="event-card-text">Check out upcoming events to see how you can get involved!</div>
         </v-container>
-
-
       </router-link>
       
-      <!-- <div @click="openGame">
-        <div class="blurred-box-v2"/>
-        <v-container class="event-card">
-          <v-img class ="event-card-image" src="../assets/gameLogo.png"/>
-          <div class="event-card-text">Play the new game <br> Solar Survivor to see how long your solar car can last!</div>
+      <div @click="openGame">
+        <div class="blurred-box-v3"/>
+        <v-container class="event2-card">
+          <v-img class ="event-card-image" src="../assets/gameLogo_resized.png"/>
+          <div class="event2-card-text">Play Solar Survivor to see how long your solar car can last!</div>
         </v-container>
-      </div> -->
+      </div>
         
       
 <!--
@@ -242,10 +240,10 @@ export default {
 
   .blurred-box{
     position: absolute;
-    width: 470px;
-    height: 470px;
+    width: 300px;
+    height: 490px;
     top: calc(50% - 105px);
-    left: 75px;
+    left: 80px;
     /*background: inherit;*/
     background: rgb(179, 179, 179);
     opacity: 0.2;
@@ -255,10 +253,10 @@ export default {
 
   .blurred-box-v2{
     position: absolute;
-    width: 470px;
-    height: 470px;
+    width: 300px;
+    height: 490px;
     top: calc(50% - 105px);
-    left: 605px;
+    left: 400px;
     /*background: inherit;*/
     background: rgb(179, 179, 179);
     opacity: 0.2;
@@ -268,10 +266,10 @@ export default {
 
   .blurred-box-v3{
     position: absolute;
-    width: 470px;
-    height: 470px;
+    width: 300px;
+    height: 490px;
     top: calc(50% - 105px);
-    left: 1135px;
+    left: 720px;
     /*background: inherit;*/
     background: rgb(179, 179, 179);
     opacity: 0.2;
@@ -283,20 +281,20 @@ export default {
     position: absolute;
     top: calc(50% - 90px);
     left: 80px;
-    width: 450px !important;
+    width: 300px !important;
     height: auto;
   }
 
   .prize-card-image {
-    width: 300px;
-    left: 60px;
+    width: 250px;
+    left: 13px;
     top: 10px;
   }
 
   .event-card-image {
-    width: 400px;
-    height: 295px;
-    left: 25px;
+    width: 250px;
+    height: 250px;
+    left: 13px;
     top: 10px;
     border-radius: 40px;
   }
@@ -304,30 +302,31 @@ export default {
   .event-card {
     position: absolute;
     top: calc(50% - 105px);
-    left: 610px;
-    width: 450px !important;
+    left: 400px;
+    width: 300px !important;
     height: auto;
   }
 
   .event2-card {
     position: absolute;
     top: calc(50% - 105px);
-    left: 1140px;
-    width: 450px !important;
+    left: 720px;
+    width: 300px !important;
     height: auto;
   }
 
   .prize-card-text {
     color: white;
-    padding-top: 30px;
+    padding-top: 40px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
+
   }
 
   .event-card-text {
     color: white;
-    padding-top: 15px;
+    padding-top: 30px;
     font-family: ProximaNova;
     font-size: 30px;
     text-align: center;
