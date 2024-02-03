@@ -245,16 +245,6 @@ export const envData = {
       image: "uiuc_quad.jpeg",
     },
     {
-      name: "Solar Farm 1.0",
-      chart: "SolarFarm_Chart.png",
-      image: "SolarPanels.jpg",
-    },
-    {
-      name: "Building Research Council Laboratory (BRC)",
-      chart: "BRC_Chart.png",
-      image: "BRC.jpg",
-    },
-    {
       name: "Business Instructional Facility (BIF)",
       chart: "BIF_Chart.png",
       image: "BIF.jpg",
@@ -263,6 +253,46 @@ export const envData = {
       name: "Electrical and Computer Engineering Building (ECEB)",
       chart: "ECEB_Chart.png",
       image: "eceb.jpg",
+    },
+    {
+      name: "Building Research Council Laboratory (BRC)",
+      chart: "BRC_Test.png",
+      image: "BRC_completed.jpg",
+    },
+    {
+      name: "Inspire Solar Table",
+      chart: "inspire_table.jpg",
+      image: "solar_table_inside.jpg",
+    },
+    {
+      name: "Solar Farm 1.0",
+      chart: "SolarFarm_Chart.png",
+      image: "SolarPanels.jpg",
+    },
+    {
+      name: "Solar Farm 2.0",
+      chart: "SolarFarm2_Chart.png",
+      image: "SolarFarm2.jpeg",
+    },
+    {
+      name: "Idea Garden",
+      chart: "idea_garden_drawing.jpg",
+      image: "idea_garden.jpg",
+    },
+    {
+      name: "I Hotel and Conference Center",
+      chart: "i_hotel_chart.png",
+      image: "i_hotel_image.jpg",
+    },
+    {
+      name: "Presidents Garden Shed",
+      chart: "garden_shed_far.jpg",
+      image: "garden_shed.jpg",
+    },
+    {
+      name: "Uni High Gym",
+      chart: "uni_high_solar.png",
+      image: "uni_high.jpg",
     },
     {
       name: "Wassaja Hall",
