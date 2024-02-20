@@ -203,6 +203,14 @@ export const whyCareData = [
 
 export const events = [
   {
+    title: "Volunteer for Zero Waste Basketball Games",
+    description:
+      "Facilities & Services, iSEE, the Division of Intercollegiate Athletics and Coca-Cola are teaming up for a second season of zero waste basketball events. Volunteers are needed to help fans recycle at the Sunday, March 3, Illini women's game against Nebraska and the Tuesday, March 5, men's game against Purdue. Both games are season finales, so big crowds are expected!",
+    image: "illini_basketball.jpg",
+    qrcode: "basketball_qrcode.png",
+    dates: "Mar. 3 • Mar. 5",
+  },
+  {
     title: "Illini Lights Out",
     description:
       "iSEE’s Illini Lights Out (ILO) program demonstrates the immense energy-saving impact of simply turning off the lights when you leave a classroom, lab, or study space. On a few Friday nights each month, volunteers gather to form mini lights-out brigades and tour campus buildings recording how many lights are left on (and shutting off as many as they can, of course). Volunteering takes about an hour and a half, and there are always snacks afterward! Thanks to a grant from the Student Sustainability Committee (SSC), ILO has multiple events you can take part in each semester! Scan the QR code to sign up!",
