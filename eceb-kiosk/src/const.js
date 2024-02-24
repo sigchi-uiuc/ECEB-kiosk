@@ -219,6 +219,23 @@ export const events = [
     dates: "Jan. 26 • Feb. 9 • Feb. 23 • March. 22 • April. 19",
   },
   {
+    title: "Sustainapalooza!",
+    description:
+      "We are excited to welcome environmentally-related RSOs, university affiliate groups, and community groups to our Spring 2024 Sustainapalooza event! The event is from 4-7 p.m. on Monday, April 22, on Anniversary Plaza/Main Quad. This is a great opportunity to learn about how these organizations are benefiting the environment and to seek opportunities to get involved in campus sustainability!",
+    image: "uiuc_quad.jpeg",
+    qrcode: "sustainapalooza_qr.png",
+    dates: "Apr. 22 from 4-7pm",
+  },
+  {
+    title:
+      "Sustainability Celebration, Green Globes Awards Ceremony, 2025 iCAP Kickoff",
+    description:
+      "Join iSEE and the Student Sustainability Leadership Council (SSLC) as we celebrate campus sustainability accomplishments and honor student groups and Registered Student Organizations for their sustainable achievements during the past year (May 2023-April 2024). And visit with Illinois Climate Action Plan (iCAP) Topical Teams to see recent accomplishments and challenges — and weigh in on what should be prioritized in the 2025 iCAP!",
+    image: "celebration.jpg",
+    qrcode: "icap_event.png",
+    dates: "Apr. 25 from 5:30-7:30pm",
+  },
+  {
     title: "Energy Efficiency Day",
     description:
       "Energy Efficiency Day is a collaborative effort of dozens of energy efficiency advocacy groups around the United States. Our goal is to share tips, tools and stories that promote the multiple benefits of energy efficiency, from lower costs to healthier homes. \nEnergy efficiency is the cheapest, quickest way to meet our energy needs, cut consumer bills and reduce pollution. Energy efficiency is also an economic engine, supporting over two million jobs nationwide in manufacturing, construction and other fields – most of which can’t be outsourced overseas.",
