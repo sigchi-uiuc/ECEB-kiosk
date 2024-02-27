@@ -8,7 +8,7 @@
         <v-container class="prize-card">
           <v-img class ="prize-card-image" src="../assets/ChargerPrize.png"/>
           <!--<div class="prize-card-text">Sign The Environmental Action Pledge by October 5th To Enter To Win A Solar Phone Charger!</div>-->
-          <div class="prize-card-text">Sign the Environmental Action Pledge to show your support!</div>
+          <div class="prize-card-text">Sign the environmental pledge to win a solar phone charger!</div>
         </v-container>
       </router-link>
 

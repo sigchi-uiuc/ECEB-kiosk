@@ -219,6 +219,14 @@ export const events = [
     dates: "Jan. 26 • Feb. 9 • Feb. 23 • March. 22 • April. 19",
   },
   {
+    title: "Earth Day Solar Phone Charger Raffle",
+    description:
+      "Sign the Environmental Action Pledge before April 22 to be entered into a raffle to win a solar phone charger! On April 22 a winner will be randomly selected from anyone who signed the environmental action pledge and notified.",
+    image: "solar_charger_graphic.png",
+    qrcode: "ChargerPrize.png",
+    dates: "Apr. 22",
+  },
+  {
     title: "Sustainapalooza!",
     description:
       "We are excited to welcome environmentally-related RSOs, university affiliate groups, and community groups to our Spring 2024 Sustainapalooza event! The event is from 4-7 p.m. on Monday, April 22, on Anniversary Plaza/Main Quad. This is a great opportunity to learn about how these organizations are benefiting the environment and to seek opportunities to get involved in campus sustainability!",
@@ -227,8 +235,7 @@ export const events = [
     dates: "Apr. 22 from 4-7pm",
   },
   {
-    title:
-      "Sustainability Celebration, Green Globes Awards Ceremony, 2025 iCAP Kickoff",
+    title: "Sustainability Celebration",
     description:
       "Join iSEE and the Student Sustainability Leadership Council (SSLC) as we celebrate campus sustainability accomplishments and honor student groups and Registered Student Organizations for their sustainable achievements during the past year (May 2023-April 2024). And visit with Illinois Climate Action Plan (iCAP) Topical Teams to see recent accomplishments and challenges — and weigh in on what should be prioritized in the 2025 iCAP!",
     image: "celebration.jpg",
