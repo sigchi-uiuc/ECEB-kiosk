@@ -49,7 +49,7 @@
         </v-carousel-item>
         <v-carousel-item>
           <v-container fluid class="title-text">
-            11.8% Of The University's Energy Consumption Comes From Renewable Sources
+            12% Of The University's Energy Consumption Comes From Renewable Sources
           </v-container>
         </v-carousel-item>
         <v-carousel-item>
