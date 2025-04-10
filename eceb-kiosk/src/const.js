@@ -203,52 +203,20 @@ export const whyCareData = [
 
 export const events = [
   {
-    title: "Volunteer for Zero Waste Basketball Games",
-    description:
-      "Facilities & Services, iSEE, the Division of Intercollegiate Athletics and Coca-Cola are teaming up for a second season of zero waste basketball events. Volunteers are needed to help fans recycle at the Sunday, March 3, Illini women's game against Nebraska and the Tuesday, March 5, men's game against Purdue. Both games are season finales, so big crowds are expected!",
-    image: "illini_basketball.jpg",
-    qrcode: "basketball_qrcode.png",
-    dates: "Mar. 3 • Mar. 5",
-  },
-  {
-    title: "Illini Lights Out",
-    description:
-      "iSEE’s Illini Lights Out (ILO) program demonstrates the immense energy-saving impact of simply turning off the lights when you leave a classroom, lab, or study space. On a few Friday nights each month, volunteers gather to form mini lights-out brigades and tour campus buildings recording how many lights are left on (and shutting off as many as they can, of course). Volunteering takes about an hour and a half, and there are always snacks afterward! Thanks to a grant from the Student Sustainability Committee (SSC), ILO has multiple events you can take part in each semester! Scan the QR code to sign up!",
-    image: "light_bulb.jpg",
-    qrcode: "IlliniLightsOut_QRCode.png",
-    dates: "Jan. 26 • Feb. 9 • Feb. 23 • March. 22 • April. 19",
-  },
-  {
     title: "Earth Day Solar Phone Charger Raffle",
     description:
       "Sign the Environmental Action Pledge before April 22 to be entered into a raffle to win a solar phone charger! On April 22 a winner will be randomly selected from anyone who signed the environmental action pledge and notified.",
     image: "solar_charger_graphic.png",
-    qrcode: "ChargerPrize.png",
+    qrcode: "earthday2025.png",
     dates: "Apr. 22",
   },
   {
     title: "Sustainapalooza!",
     description:
-      "We are excited to welcome environmentally-related RSOs, university affiliate groups, and community groups to our Spring 2024 Sustainapalooza event! The event is from 4-7 p.m. on Monday, April 22, on Anniversary Plaza/Main Quad. This is a great opportunity to learn about how these organizations are benefiting the environment and to seek opportunities to get involved in campus sustainability!",
+      "We are excited to welcome environmentally-related RSOs, university affiliate groups, and community groups to our Spring 2025 Sustainapalooza event! The event is from 1-6 p.m. on Monday, April 12, on Anniversary Plaza/Main Quad. This is a great opportunity to learn about how these organizations are benefiting the environment and to seek opportunities to get involved in campus sustainability!",
     image: "uiuc_quad.jpeg",
     qrcode: "sustainapalooza_qr.png",
-    dates: "Apr. 22 from 4-7pm",
-  },
-  {
-    title: "Sustainability Celebration",
-    description:
-      "Join iSEE and the Student Sustainability Leadership Council (SSLC) as we celebrate campus sustainability accomplishments and honor student groups and Registered Student Organizations for their sustainable achievements during the past year (May 2023-April 2024). And visit with Illinois Climate Action Plan (iCAP) Topical Teams to see recent accomplishments and challenges — and weigh in on what should be prioritized in the 2025 iCAP!",
-    image: "celebration.jpg",
-    qrcode: "icap_event.png",
-    dates: "Apr. 25 from 5:30-7:30pm",
-  },
-  {
-    title: "Energy Efficiency Day",
-    description:
-      "Energy Efficiency Day is a collaborative effort of dozens of energy efficiency advocacy groups around the United States. Our goal is to share tips, tools and stories that promote the multiple benefits of energy efficiency, from lower costs to healthier homes. \nEnergy efficiency is the cheapest, quickest way to meet our energy needs, cut consumer bills and reduce pollution. Energy efficiency is also an economic engine, supporting over two million jobs nationwide in manufacturing, construction and other fields – most of which can’t be outsourced overseas.",
-    image: "ee_logo.png",
-    qrcode: "ee_day_qr.png",
-    dates: "Oct. 4",
+    dates: "Apr. 12 from 1-6pm",
   },
 ];
 
